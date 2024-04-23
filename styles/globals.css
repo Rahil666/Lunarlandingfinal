@@ -3,6 +3,49 @@ body a {
   text-decoration: none;
 }
 /*----------------------banner------------------- */
+
+.header {
+  background-color: transparent; /* Initial background color */
+
+  transition: background-color 0.3s ease; /* Smooth transition */
+  position: fixed;
+  top: 10;
+  width: 100%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 120px;
+  padding-right: 120px;
+  z-index: 1000;
+}
+.tvcontainer {
+  padding-top: 200px;
+}
+.scrolled-text {
+  color: #000000 !important;
+}
+.scrolled-icon {
+  color: #000000; /* Change to the desired color */
+}
+
+.header.scrolled {
+  background-color: #eff7ff; /* Background color when scrolled */
+}
+
+.sticky {
+  position: fixed !important;
+  top: 0;
+  width: 100px;
+  z-index: 1000;
+  background-color: #ffffff; /* Change to desired background color */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
+}
+
+.sticky .contentw,
+.sticky .contentp,
+.sticky .arrowstylee {
+  color: #000000 !important; /* Change text and icon color to black */
+}
+
 #ea_banner {
   background: url(../public/images/ea_banner_bg.jpg);
   background-position: 50% 50%;
@@ -94,6 +137,17 @@ body a {
   width: 100%;
   height: 195px;
   object-fit: cover;
+}
+#ea_banner .buttonstyle {
+  border: 0px;
+  background-color: green;
+  color: #fff;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
+#ea_banner .arrowstylee {
+  margin-left: 10px;
 }
 
 /*----------------------tabsection------------------- */
@@ -302,11 +356,16 @@ body a {
 #whyppl h1 {
   text-align: center;
 }
+.heihtt {
+  height: 450px;
+  background-color: #06d31e;
+  margin: 20px;
+}
 .cardwhy {
-  background-color: #fffbfb;
   border: 2px solid transparent;
+
   margin: 3px;
-  height: 300px;
+
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
 }
 
@@ -442,6 +501,19 @@ body a {
 /*----------------------start media query------------------- */
 
 @media (max-width: 556px) {
+  .header {
+    background-color: transparent; /* Initial background color */
+
+    transition: background-color 0.3s ease; /* Smooth transition */
+    position: fixed;
+    top: 10;
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    z-index: 1000;
+  }
   .item {
     display: none;
   }
@@ -595,6 +667,13 @@ body a {
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  .cardwhy {
+    background-color: #fffbfb;
+    border: 2px solid transparent;
+    margin: 3px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
+  }
 }
 
 @media (min-width: 556px) {
@@ -639,6 +718,19 @@ body a {
 }
 
 @media (max-width: 576px) {
+  .header {
+    background-color: transparent; /* Initial background color */
+
+    transition: background-color 0.3s ease; /* Smooth transition */
+    position: fixed;
+    top: 10;
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 1000;
+  }
 }
 
 /* // Small devices (landscape phones, 576px and up) */
@@ -646,10 +738,30 @@ body a {
 }
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .contact-item {
+    padding-right: 135px;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cardwhy {
+    background-color: #fffbfb;
+    border: 2px solid transparent;
+    margin: 3px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
+  }
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .cardwhy {
+    border: 2px solid transparent;
+    margin: 3px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
+  }
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */

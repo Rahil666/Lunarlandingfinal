@@ -5,6 +5,7 @@ import Link from "next/link";
 import Slider from "react-slick";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Button } from "react-bootstrap";
 
 export default function Home() {
   const settings = {
@@ -248,6 +249,25 @@ export default function Home() {
     setAnimationKey(animationKey + 1); // Change animation key to trigger re-render with new animations
   };
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -256,49 +276,94 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <div id="ea_banner">
         <div className="ea_banner-o ">
-          <div class=" container   item mb-3 ">
-            <div className="row ">
-              <div class="col-6 col-md-5 width   ">
-                <a href="#">
-                  <img
-                    src="/images/lunar white.png"
-                    class="logo"
-                    alt="Image 1"
-                  />
-                </a>
-              </div>
+          <div className={scrolled ? "header scrolled" : "header"}>
+            <div class="  mb-3">
+              <div class="row">
+                <div class="col-6 col-md-5 width">
+                  <a href="#">
+                    <img
+                      src={
+                        scrolled
+                          ? "/images/another-image.png"
+                          : "/images/lunar white.png"
+                      }
+                      class="logo"
+                      alt="Image 1"
+                    />
+                  </a>
+                </div>
+                <div class="col-md-6 d-flex align-items-center item">
+                  <div class="col-12">
+                    <div class="d-flex">
+                      <div class="col-md-5 col-4 contact-item ">
+                        <i
+                          className={
+                            scrolled
+                              ? "fas fa-phone  scrolled-icon"
+                              : "fas fa-phone iconww"
+                          }
+                        ></i>
 
-              <div class=" col-md-6 d-flex align-items-center item  ">
-                <div class="col-12">
-                  <div class="d-flex">
-                    <div class=" col-md-5 col-4 contact-item    ">
-                      <i class="fas fa-phone  iconww"></i>
-                      <a href="tel:0471-3592716">
-                        <h6>0471-3592716</h6>
-                      </a>
-                    </div>
-                    <div class=" col-md-4 col-4 contact-item  ">
-                      <i class="fas fa-envelope icon"></i>
-                      <a href="mailto:info@lunarenp.com">
-                        <h6>info@lunarenp.com</h6>
-                      </a>
-                    </div>
-                    <div class=" col-md-4 col-4 contact-item ">
-                      <i class="fas fa-phone icon"></i>
-                      <a href="tel:917907574781">
-                        <h6>917907574781</h6>
-                      </a>
+                        <a href="tel:0471-3592716">
+                          <h6
+                            className={
+                              scrolled ? "scrolled-text" : "text-nowrap"
+                            }
+                          >
+                            0471-3592716
+                          </h6>
+                        </a>
+                      </div>
+                      <div class="col-md-4 col-4 contact-item">
+                        <i
+                          className={
+                            scrolled
+                              ? "fas fa-envelope  scrolled-icon"
+                              : "fas fa-envelope icon"
+                          }
+                        ></i>
+
+                        <a href="mailto:info@lunarenp.com">
+                          <h6
+                            className={
+                              scrolled ? "scrolled-text" : "colorchange"
+                            }
+                          >
+                            {" "}
+                            info@lunarenp.com
+                          </h6>
+                        </a>
+                      </div>
+                      <div class="col-md-4 col-4 contact-item">
+                        <i
+                          className={
+                            scrolled
+                              ? "fas fa-phone  scrolled-icon"
+                              : "fas fa-phone icon"
+                          }
+                        ></i>
+                        <i class=" "></i>
+                        <a href="tel:917907574781">
+                          <h6
+                            className={
+                              scrolled ? "scrolled-text" : "colorchange"
+                            }
+                          >
+                            917907574781
+                          </h6>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div></div>
             </div>
-            <div></div>
           </div>
-
-          <div className="container pt-5 col-md-12 col-12  d-md-flex">
+          <div className="container tvcontainer col-md-12 col-12  d-md-flex">
             <div className="d-md-flex col-md-6 col-12  ">
               <div className="justify-content-center d-flex">
                 <div className="pcimage">
@@ -319,22 +384,30 @@ export default function Home() {
                         </div>
                       </Slider>
                     </div>
-                    </div>
                   </div>
                 </div>
               </div>
-              <div className="  mt-5  col-md-6 justify-content-center d-block   ">
-                <h1 className="contentw">Welcome to Lunar Enterprises!</h1>
-                <p className="contentp">
-                  We are excited to present our proposal for your digital
-                  marketing, website design, and development needs. At Borcelle,
-                  we combine creativity, innovation, and strategy to deliver
-                  exceptional digital solutions that will help your business
-                  thrive online.
-                </p>
+            </div>
+            <div className="  mt-5  col-md-6 justify-content-center d-block   ">
+              <h1 className="contentw">Welcome to Lunar Enterprises!</h1>
+              <p className="contentp">
+                We are excited to present our proposal for your digital
+                marketing, website design, and development needs. At Borcelle,
+                we combine creativity, innovation, and strategy to deliver
+                exceptional digital solutions that will help your business
+                thrive online.
+              </p>
+              <div className="align-content-center   ">
+                <button className="buttonstyle " onClick={() => setShowModal}>
+                  Contact Us
+                  <i
+                    class="fa fa-chevron-right  arrowstylee"
+                    aria-hidden="true"
+                  ></i>
+                </button>
               </div>
             </div>
-    
+          </div>
 
           <div className="sliderstyle mt-5  container-fluid">
             <Slider {...settings}>
@@ -343,77 +416,72 @@ export default function Home() {
               </div>
 
               <div>
-              <img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon5as.png" />
-            </div>
-            <div>
-            <img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon12as.png" />
-            </div>
-            <div>
-            <img src="  http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon14as.png" />
-          </div>
-          <div>
-          <img src="  http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon10as.png" />
-        </div>
+                <img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon5as.png" />
+              </div>
+              <div>
+                <img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon12as.png" />
+              </div>
+              <div>
+                <img src="  http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon14as.png" />
+              </div>
+              <div>
+                <img src="  http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon10as.png" />
+              </div>
 
-    
-  
-    <div>
-    <img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon1as.png" />
-  </div>
+              <div>
+                <img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon1as.png" />
+              </div>
 
-  <div>
-  <img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon5as.png" />
-</div>
+              <div>
+                <img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon5as.png" />
+              </div>
 
-<div>
-<img src="  http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon14as.png" />
-</div>
-<div>
-<img src="  http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon10as.png" />
-</div>
+              <div>
+                <img src="  http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon14as.png" />
+              </div>
+              <div>
+                <img src="  http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon10as.png" />
+              </div>
 
-<div>
-<img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon12as.png" />
-</div>
+              <div>
+                <img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon12as.png" />
+              </div>
 
-<div>
-<img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon1as.png" />
-</div>
+              <div>
+                <img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon1as.png" />
+              </div>
 
-<div>
-<img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon5as.png" />
-</div>
+              <div>
+                <img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon5as.png" />
+              </div>
 
-<div>
-<img src="  http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon14as.png" />
-</div>
-<div>
-<img src="  http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon10as.png" />
-</div>
+              <div>
+                <img src="  http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon14as.png" />
+              </div>
+              <div>
+                <img src="  http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon10as.png" />
+              </div>
 
+              <div>
+                <img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon1as.png" />
+              </div>
 
+              <div>
+                <img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon5as.png" />
+              </div>
+              <div>
+                <img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon12as.png" />
+              </div>
+              <div>
+                <img src="  http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon14as.png" />
+              </div>
+              <div>
+                <img src="  http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon10as.png" />
+              </div>
 
-<div>
-<img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon1as.png" />
-</div>
-
-<div>
-<img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon5as.png" />
-</div>
-<div>
-<img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon12as.png" />
-</div>
-<div>
-<img src="  http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon14as.png" />
-</div>
-<div>
-<img src="  http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon10as.png" />
-</div>
-
-<div>
-<img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon12as.png" />
-</div>
-
+              <div>
+                <img src="http://backergysoft.com/wp-content/uploads/2022/09/partnerIcon12as.png" />
+              </div>
             </Slider>
           </div>
         </div>
@@ -622,24 +690,41 @@ export default function Home() {
           <div className="  centerclient col-md-8 mb-5  container">
             <Slider {...settingsclient}>
               <div>
-                <img src="/images/aims logo.webp"  style={{width:100,height:60}}/>
+                <img
+                  src="/images/aims logo.webp"
+                  style={{ width: 100, height: 60 }}
+                />
               </div>
               <div>
-                <img src="/images/Bhakshanagal.webp"  style={{width:100,height:60}} />
+                <img
+                  src="/images/Bhakshanagal.webp"
+                  style={{ width: 100, height: 60 }}
+                />
               </div>
               <div>
-                <img src="/images/Bride of christ.webp"  style={{width:100,height:60}} />
+                <img
+                  src="/images/Bride of christ.webp"
+                  style={{ width: 100, height: 60 }}
+                />
               </div>
               <div>
-                <img src="/images/LMC Logo.webp"  style={{width:100,height:60}}/>
+                <img
+                  src="/images/LMC Logo.webp"
+                  style={{ width: 100, height: 60 }}
+                />
               </div>
               <div>
-                <img src="/images/Silicon-Institute-Logo.webp"  style={{width:100,height:60}} />
+                <img
+                  src="/images/Silicon-Institute-Logo.webp"
+                  style={{ width: 100, height: 60 }}
+                />
               </div>
               <div>
-                <img src="/images/STAR LINK PNG.b89762db452c02da0982.webp"  style={{width:100,height:60}}/>
+                <img
+                  src="/images/STAR LINK PNG.b89762db452c02da0982.webp"
+                  style={{ width: 100, height: 60 }}
+                />
               </div>
-             
             </Slider>
           </div>
         </div>
@@ -775,27 +860,19 @@ export default function Home() {
               <div class="d-flex mb-3">
                 <i class="fas fa-phone mt-1 me-3 fs-4 color-primary iconww"></i>
                 <p class="fs-5">
-                <a href="tel:917907574781">
-                India: +91 7347482489
-                </a>
+                  <a href="tel:917907574781">India: +91 7347482489</a>
                 </p>
               </div>
               <div class="d-flex mb-3">
                 <i class="fas fa-phone mt-1 me-3 fs-4 color-primary iconww"></i>
                 <p class="fs-5">
-                <a href="tel:917907574781">
-                UK: +1 9777812319
-                </a>
+                  <a href="tel:917907574781">UK: +1 9777812319</a>
                 </p>
-              
               </div>
               <div class="d-flex mb-3">
                 <i class="fa fa-envelope mt-1 me-3 fs-4 color-primary"></i>
                 <p class="fs-5">
-                
-                <a href="mailto:info@lunarenp.com">
-                lunarenterprises.com
-                </a>
+                  <a href="mailto:info@lunarenp.com">lunarenterprises.com</a>
                 </p>
               </div>
               <div class="d-flex mb-3">
@@ -890,7 +967,7 @@ export default function Home() {
               </div>
               <h4>Dubai</h4>
               <p>
-                Building A2 IFZA Business Park-  <br />
+                Building A2 IFZA Business Park- <br />
                 Dubai Silicon Oasis – Dubai
               </p>
             </div>
