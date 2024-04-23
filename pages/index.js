@@ -280,9 +280,9 @@ export default function Home() {
       <div id="ea_banner">
         <div className="ea_banner-o ">
           <div className={scrolled ? "header scrolled" : "header"}>
-            <div class="  mb-3">
+            <div class=" container mb-3">
               <div class="row">
-                <div class="col-6 col-md-5 width">
+                <div class="col-6 col-md-5 widthz">
                   <a href="#">
                     <img
                       src={
@@ -296,9 +296,9 @@ export default function Home() {
                   </a>
                 </div>
                 <div class="col-md-6 d-flex align-items-center item">
-                  <div class="col-12">
+                  <div class="col-12 itemhide">
                     <div class="d-flex">
-                      <div class="col-md-5 col-4 contact-item ">
+                      <div class="col-md-5 col-4 contact-item  ">
                         <i
                           className={
                             scrolled
@@ -317,7 +317,7 @@ export default function Home() {
                           </h6>
                         </a>
                       </div>
-                      <div class="col-md-4 col-4 contact-item">
+                      <div class="col-md-4 col-5 contact-item">
                         <i
                           className={
                             scrolled
@@ -398,13 +398,15 @@ export default function Home() {
                 thrive online.
               </p>
               <div className="align-content-center   ">
-                <button className="buttonstyle " onClick={() => setShowModal}>
+              <a href='#contactus'>
+                <button className="buttonstyle " >
                   Contact Us
                   <i
                     class="fa fa-chevron-right  arrowstylee"
                     aria-hidden="true"
                   ></i>
                 </button>
+                </a>
               </div>
             </div>
           </div>
@@ -753,6 +755,9 @@ export default function Home() {
                     Lunar. Since Lunar had many clients from abroad, I got
                     exposed to new laws, which added to my skills. This helped
                     me gain a high paid salary abroad.
+                    <div className='hegihtppl'>
+                    
+                    </div>
                   </p>
                 </div>
               </div>
@@ -776,6 +781,9 @@ export default function Home() {
                     media executive at Lunar. Wishing Lunar, for prosperity and
                     growth. I thank Lunar Enterprises for the oppurtunity
                   </p>
+                  <div className='hegihtp'>
+                    
+                  </div>
                 </div>
               </div>
             </div>
@@ -798,6 +806,9 @@ export default function Home() {
                     assistance of the web developers of Lunar and now I am
                     working as a web developer at Lunar.
                   </p>
+                  <div className='hegihtppl'>
+                    
+                  </div>
                 </div>
               </div>
             </div>
@@ -821,6 +832,9 @@ export default function Home() {
                     exposed to new laws, which added to my skills. This helped
                     me gain a high paid salary abroad.
                   </p>
+                  <div className='hegihtppl'>
+                    
+                  </div>
                 </div>
               </div>
             </div>
@@ -843,6 +857,9 @@ export default function Home() {
                     testing practices. This experience made me get a highly paid
                     job. Now I am working at UST global.
                   </p>
+                  <div className='hegihtp'>
+                    
+                  </div>
                 </div>
               </div>
             </div>

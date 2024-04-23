@@ -13,8 +13,8 @@ body a {
   width: 100%;
   padding-top: 0px;
   padding-bottom: 0px;
-  padding-left: 120px;
-  padding-right: 120px;
+  /* padding-left: 250px;
+  padding-right: 250px; */
   z-index: 1000;
 }
 .tvcontainer {
@@ -22,6 +22,7 @@ body a {
 }
 .scrolled-text {
   color: #000000 !important;
+  
 }
 .scrolled-icon {
   color: #000000; /* Change to the desired color */
@@ -60,6 +61,7 @@ body a {
 .logo {
   width: 140px;
   height: 100px;
+ 
 }
 .contentw {
   color: white;
@@ -74,7 +76,8 @@ body a {
   margin-left: 30px;
 }
 .contact-item {
-  padding-right: 110px;
+  
+  padding-right: 10px;
   flex-direction: row;
   display: flex;
   align-items: center;
@@ -91,9 +94,11 @@ body a {
   color: white;
 }
 #ea_banner h6 {
+  font-size: 18px !important;
   padding-top: 6px;
   margin-left: 5px;
   color: white;
+ 
 }
 
 .sliderstyle {
@@ -145,6 +150,11 @@ body a {
   border-radius: 10px;
   align-items: center;
   justify-content: center;
+  margin-left: 30px;
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-right:15px;
+  padding-left:15px
 }
 #ea_banner .arrowstylee {
   margin-left: 10px;
@@ -318,7 +328,12 @@ body a {
   padding-top: 150px;
 }
 /*----------------------whypplwhyppl------------------- */
-
+.hegihtppl{
+  height: 50px;
+}
+.hegihtp{
+  height: 78px;
+}
 /* Style for slick dots */
 .slick-dots {
   display: flex;
@@ -501,6 +516,14 @@ body a {
 /*----------------------start media query------------------- */
 
 @media (max-width: 556px) {
+  .logo{
+   justify-content: center;
+   align-items: center;
+   display: flex;
+  }
+  .itemhide{
+    display: none;
+  }
   .header {
     background-color: transparent; /* Initial background color */
 
@@ -522,7 +545,8 @@ body a {
     display: none;
   }
   .contact-item {
-    padding-right: 40px;
+  
+    /* padding-right: 40px; */
     flex-direction: row;
     display: flex;
     align-items: center;
@@ -530,7 +554,8 @@ body a {
   }
   #ea_banner h6 {
     margin-left: 4px;
-    color: white;
+  
+    color:white;
     font-size: 12px;
   }
   /*----------------------bannercout------------------- */
@@ -689,6 +714,7 @@ body a {
   }
 
   .contact-item {
+    
     padding-right: 10px;
     flex-direction: row;
 
@@ -698,7 +724,7 @@ body a {
   #ea_banner h6 {
     margin-left: 4px;
     color: white;
-    font-size: 12px;
+    font-size: 16px;
   }
 
   /*----------------------bannercout------------------- */
@@ -739,7 +765,8 @@ body a {
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .contact-item {
-    padding-right: 135px;
+ 
+    padding-right: 175px;
     flex-direction: row;
     display: flex;
     align-items: center;
