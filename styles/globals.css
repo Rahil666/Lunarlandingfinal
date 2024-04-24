@@ -22,6 +22,7 @@ body a {
 }
 .scrolled-text {
   color: #000000 !important;
+  white-space: nowrap !important;
   
 }
 .scrolled-icon {
@@ -62,6 +63,12 @@ body a {
   width: 140px;
   height: 100px;
  
+}
+.logoscrolled{
+  margin-top: 25px;
+  width: 140px;
+  height: 60px;
+
 }
 .contentw {
   color: white;

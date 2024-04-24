@@ -160,7 +160,7 @@ export default function Home() {
         title2: "Social Media Marketing",
         image: "/images/Mobile.png",
       },
-      { title: "Card 2", image: "/images/Mobile.png" },
+      { title: "Card 2", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-1.webp" },
       { title: "Card 1", image: "/images/Mobile.png" },
       { title: "Card 2", image: "/images/Mobile.png" },
       // Add more cards as needed
@@ -169,65 +169,67 @@ export default function Home() {
       {
         title1: "Infinity Academy | Social Media Design",
         title2: "Mobile App Development",
-        image: "/images/Mobile.png",
+        image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-6.webp",
       },
       // Add more cards specific to Mobile App Development
     ],
     "App Development": [
-      { title2: "App Development", image: "/images/Mobile.png" },
+      { title2: "App Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-5.webp" },
 
+      { title2: "App Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/Robotics.webp" },
       { title2: "App Development", image: "/images/Mobile.png" },
-      { title2: "App Development", image: "/images/Mobile.png" },
-      { title2: "App Development", image: "/images/Mobile.png" },
+      { title2: "App Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp" },
       // Add more cards specific to Mobile App Development
     ],
     " Social Media Marketing": [
-      { title2: "Social Media Marketing", image: "/images/Mobile.png" },
+      { title2: "Social Media Marketing", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-4.webp" },
 
-      { title2: "Social Media Marketing", image: "/images/Mobile.png" },
-      { title2: "Social Media Marketing", image: "/images/Mobile.png" },
+      { title2: "Social Media Marketing",image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker.webp" },
+      { title2: "Social Media Marketing",image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-2.webp" },
       { title2: "Social Media Marketing", image: "/images/Mobile.png" },
       // Add more cards specific to Mobile App Development
     ],
     "IOS Development": [
+      { title2: "IOS Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-3.webp" },
       { title2: "IOS Development", image: "/images/Mobile.png" },
-      { title2: "IOS Development", image: "/images/Mobile.png" },
-      { title2: "IOS Development", image: "/images/Mobile.png" },
-      { title2: "IOS Development", image: "/images/Mobile.png" },
-      { title2: "IOS Development", image: "/images/Mobile.png" },
+      { title2: "IOS Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp" },
+      { title2: "IOS Development",image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-2.webp" },
+   
       // Add more cards specific to Mobile App Development
     ],
     "Brand Promotion": [
+      { title2: "Brand Promotion", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-2.webp" },
       { title2: "Brand Promotion", image: "/images/Mobile.png" },
-      { title2: "Brand Promotion", image: "/images/Mobile.png" },
-      { title2: "Brand Promotion", image: "/images/Mobile.png" },
-      { title2: "Brand Promotion", image: "/images/Mobile.png" },
+      { title2: "Brand Promotion",  image: "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp" },
+      { title2: "Brand Promotion",image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker.webp" },
       { title2: "Brand Promotion", image: "/images/Mobile.png" },
       // Add more cards specific to Mobile App Development
     ],
     "Web Development": [
-      { title2: "Web Development", image: "/images/Mobile.png" },
-      { title2: "Web Development", image: "/images/Mobile.png" },
-      { title2: "Web Development", image: "/images/Mobile.png" },
+      { title2: "Web Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/Optimus-Robo.webp" },
+      { title2: "Web Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp" },
+      { title2: "Web Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/Robotics.webp" },
 
       { title2: "Web Development", image: "/images/Mobile.png" },
-      // Add more cards specific to Mobile App Development
+      
     ],
     " 3D Design & Animation": [
+      { title2: " 3D Design & Animation", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker.webp" },
       { title2: " 3D Design & Animation", image: "/images/Mobile.png" },
+      { title2: " 3D Design & Animation", image: "https://backergysoft.com/wp-content/uploads/2017/06/Cipa-2-1.jpg" },
       { title2: " 3D Design & Animation", image: "/images/Mobile.png" },
-      { title2: " 3D Design & Animation", image: "/images/Mobile.png" },
-      { title2: " 3D Design & Animation", image: "/images/Mobile.png" },
-      { title2: " 3D Design & Animation", image: "/images/Mobile.png" },
+      { title2: " 3D Design & Animation",image: "https://backergysoft.com/wp-content/uploads/2017/06/Cipa-2-1.jpg" },
 
       // Add more cards specific to Mobile App Development
     ],
     "Graphic designing": [
-      { title2: "Graphic designing", image: "/images/Mobile.png" },
+      { title2: "Graphic designing", image: "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp" },
       // Add more cards specific to Mobile App Development
     ],
     "Software Development": [
-      { title2: "Software Development", image: "/images/Mobile.png" },
+      { title2: "Software Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/Cipa-2-1.jpg" },
+      { title2: "Software Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/Robotics.webp" },
+      // Add more cards specific to Mobile App Development
       // Add more cards specific to Mobile App Development
     ],
     // Define data for other tabs similarly
@@ -271,7 +273,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Lunar Enterprises</title>
         <meta name="description" content="Generated by create next app" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -287,10 +289,11 @@ export default function Home() {
                     <img
                       src={
                         scrolled
-                          ? "/images/another-image.png"
+                          ? "/images/lunar black.png"
                           : "/images/lunar white.png"
                       }
-                      class="logo"
+                      className={scrolled ? "logoscrolled" : "logo"}
+                    
                       alt="Image 1"
                     />
                   </a>
@@ -755,10 +758,11 @@ export default function Home() {
                     Lunar. Since Lunar had many clients from abroad, I got
                     exposed to new laws, which added to my skills. This helped
                     me gain a high paid salary abroad.
-                    <div className='hegihtppl'>
-                    
-                    </div>
+                   
                   </p>
+                  <div className='hegihtppl'>
+                    
+                  </div>
                 </div>
               </div>
             </div>
@@ -806,9 +810,10 @@ export default function Home() {
                     assistance of the web developers of Lunar and now I am
                     working as a web developer at Lunar.
                   </p>
-                  <div className='hegihtppl'>
+              
+                </div>
+                <div className='hegihtppl'>
                     
-                  </div>
                 </div>
               </div>
             </div>
