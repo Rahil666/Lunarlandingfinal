@@ -160,9 +160,9 @@ export default function Home() {
         title2: "Social Media Marketing",
         image: "/images/Mobile.png",
       },
-      { title: "Card 2", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-1.webp" },
-      { title: "Card 1", image: "/images/Mobile.png" },
-      { title: "Card 2", image: "/images/Mobile.png" },
+      { title: "App Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-1.webp" },
+      { title: "Graphic Design", image: "/images/Mobile.png" },
+      { title: "Brand Promotion", image: "/images/Mobile.png" },
       // Add more cards as needed
     ],
     "Mobile App Development": [
@@ -743,6 +743,7 @@ export default function Home() {
             <div>
               <div class=" ">
                 <div class="cardwhy px-3 pt-4  m-3">
+                <a href="https://www.instagram.com/aimglobalbusinesscorp/">
                   <div class=" align-items-center">
                   {/*<img src="/images/ananthu.webp" class="round" /> */}  
                     <div class="">
@@ -765,13 +766,16 @@ export default function Home() {
                   <div className='hegippl'>
                     
                   </div>
+                  </a>
                 </div>
+                
               </div>
             </div>
 
             <div>
               <div class="">
                 <div class="cardwhy px-3 pt-4  m-3">
+                <a href="https://www.instagram.com/legendmaritime/">
                 <div class=" align-items-center">
                 {/*<img src="/images/ananthu.webp" class="round" /> */}  
                   <div class="">
@@ -793,12 +797,16 @@ export default function Home() {
                   <div className='hegi'>
                     
                   </div>
+                  </a>
                 </div>
+                
               </div>
+              
             </div>
             <div>
               <div class="">
                 <div class="cardwhy px-3 pt-4  m-3">
+                <a href="https://www.instagram.com/siliconinstitutedubai/">
                 <div class=" align-items-center">
                 {/*<img src="/images/ananthu.webp" class="round" /> */}  
                   <div class="">
@@ -820,6 +828,7 @@ export default function Home() {
                   <div className='heg'>
                     
                   </div>
+                  </a>
                 </div>
                
               </div>
@@ -882,10 +891,20 @@ export default function Home() {
                 </p>
               </div>
               <div class="d-flex mb-3">
+
+              <a href="https://api.whatsapp.com/send/?phone=%2B917025715775&text=Hello+from+your+website&type=phone_number&app_absent=0">
                 <i class="fa-brands fa-square-whatsapp mt-1 me-3 fs-2 color-primary"></i>
+                </a>
+                <a href="https://www.facebook.com/lunarenterprises.in">
                 <i class="fa-brands fa-facebook  mt-1 me-3 fs-2 color-primary"></i>
+                </a>
+                <a href="https://www.instagram.com/lunarenterprises_india/">
                 <i class="fa-brands fa-square-instagram  mt-1 me-3 fs-2 color-primary"></i>
+                </a>
+               
+                <a href="https://twitter.com/Lunarenter37682">
                 <i class="fa-brands fa-square-x-twitter  mt-1 me-3 fs-2 color-primary"></i>
+                </a>
               </div>
             </div>
             <div class="col-lg-6 col-md-6">
