@@ -888,7 +888,7 @@ export default function Home() {
               <div class="d-flex mb-3">
                 <i class="fas fa-phone mt-1 me-3 fs-4 color-primary iconww"></i>
                 <p class="fs-5">
-                  <a href="tel:917907574781">UK: +1 9777812319</a>
+                  <a href="tel:917907574781">AE: +971 502490087</a>
                 </p>
               </div>
               <div class="d-flex mb-3">
