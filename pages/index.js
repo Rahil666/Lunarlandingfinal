@@ -537,7 +537,7 @@ export default function Home() {
                 >
                   <img src={card.image} alt={card.title} />
                   <div className="card-body content">
-                    <h2>{card.title1 || card.title2}</h2>
+                    <h2>{card.title1 || card.title}</h2>
                     <p>{card.title2}</p>
                   </div>
                 </div>
@@ -736,31 +736,33 @@ export default function Home() {
       </div>
 
       <div id="whyppl" class="container ">
-        <h1> What People Say's </h1>
+        <h1> Client Testimonials </h1>
 
         <div className="col-md-12 mt-5  ">
           <Slider {...settingswhy}>
             <div>
               <div class=" ">
                 <div class="cardwhy px-3 pt-4  m-3">
-                  <div class="d-flex align-items-center">
-                    <img src="/images/ananthu.webp" class="round" />
-                    <div class="px-3">
-                      <h4>Ananthu v Jayan</h4>
-                      <p>SEO Executive</p>
+                  <div class=" align-items-center">
+                  {/*<img src="/images/ananthu.webp" class="round" /> */}  
+                    <div class="">
+                    <h2 className="mt-2 ">SEO Transformation</h2>
+                    <p className="mt-1">AIM Business Corp</p>
+                      <h5>Numan Mustafa</h5>
+                      <p> Aims Business Corp, Project Manager</p>
                     </div>
+             
+                   
                   </div>
-                  <h4 className="mt-2">Excellent Career Growth</h4>
+                
                   <p>
-                    I discovered Lunar as I was searching for a good firm to
-                    start my accountant journey as a fresher. I was given the
-                    opportunity to get trained under the senior accountant at
-                    Lunar. Since Lunar had many clients from abroad, I got
-                    exposed to new laws, which added to my skills. This helped
-                    me gain a high paid salary abroad.
+                  Lunar Enterprises did a great job on
+                  increasing website traffic I'd
+                  recommend them for optimising the
+                  website engagement and traffic.
                    
                   </p>
-                  <div className='hegihtppl'>
+                  <div className='hegippl'>
                     
                   </div>
                 </div>
@@ -770,22 +772,25 @@ export default function Home() {
             <div>
               <div class="">
                 <div class="cardwhy px-3 pt-4  m-3">
-                  <div class="d-flex align-items-center  ">
-                    <img src="/images/Kavya.webp" class="round" />
-                    <div class="px-3">
-                      <h4>Kavya</h4>
-                      <p> Social Media Executive</p>
-                    </div>
+                <div class=" align-items-center">
+                {/*<img src="/images/ananthu.webp" class="round" /> */}  
+                  <div class="">
+                  <h2 className="mt-2 "> Digital Marketing</h2>
+                  <p className="mt-1">Legend Maritime Cargo</p>
+                    <h5>Faiqa Farooq</h5>
+                    <p> legend Maritime Cargo, Manager</p>
                   </div>
-                  <h4 className="mt-2">Amazing Mentors</h4>
+           
+                 
+                </div>
+                
                   <p>
-                    I joined Lunar as an intern. While doing internship I was
-                    given the opportunity to deal with 50+ international clients
-                    per month. This developed my skills and now I am a social
-                    media executive at Lunar. Wishing Lunar, for prosperity and
-                    growth. I thank Lunar Enterprises for the oppurtunity
+                  Lunar Enterprises has been
+ professional in providing quality leads
+ which helped us to increase our revenue
+ by 135% in 2023 last quarter
                   </p>
-                  <div className='hegihtp'>
+                  <div className='hegi'>
                     
                   </div>
                 </div>
@@ -794,57 +799,35 @@ export default function Home() {
             <div>
               <div class="">
                 <div class="cardwhy px-3 pt-4  m-3">
-                  <div class="d-flex align-items-center">
-                    <img src="/images/brimin.webp" class="round" />
-                    <div class="px-3">
-                      <h4 className="">Bremin</h4>
-                      <p> Front End Developer</p>
-                    </div>
+                <div class=" align-items-center">
+                {/*<img src="/images/ananthu.webp" class="round" /> */}  
+                  <div class="">
+                  <h2 className="mt-2  "> Social Media Engagement</h2>
+                  <p className="mt-1"> Silicon Institue</p>
+                    <h5>Mr. Ganeshwaran</h5>
+                    <p> Silicon Institute, CEO</p>
                   </div>
-                  <h4 className="mt-2">Supportive Team</h4>
-                  <p>
-                    I started my journey in Lunar as a marketing associate. Soon
-                    I discovered my interest in web development. After sharing
-                    my interest with Lunar, they didn't hesitate to give me a
-                    chance. I was trained in web development with the expert
-                    assistance of the web developers of Lunar and now I am
-                    working as a web developer at Lunar.
-                  </p>
-              
+           
+                 
                 </div>
-                <div className='hegihtppl'>
-                    
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <div class="">
-                <div class="cardwhy px-3 pt-4  m-3">
-                  <div class="d-flex align-items-center">
-                    <img src="/images/divya.webp" class="round" />
-                    <div className="px-3">
-                      <h4>Divya</h4>
-                      <p> Accountant</p>
-                    </div>
-                  </div>
-                  <h4 className="mt-2">Amazing Working Atmosphere</h4>
+                  
                   <p>
-                    I discovered Lunar as I was searching for a good firm to
-                    start my accountant journey as a fresher. I was given the
-                    opportunity to get trained under the senior accountant at
-                    Lunar. Since Lunar had many clients from abroad, I got
-                    exposed to new laws, which added to my skills. This helped
-                    me gain a high paid salary abroad.
+                  Their professional and elegant posters
+                  has increased brand awareness and
+                  engagement among students and
+                  parents
                   </p>
-                  <div className='hegihtppl'>
+                  <div className='heg'>
                     
                   </div>
                 </div>
+               
               </div>
             </div>
 
-            <div>
+         
+
+           {/* <div>
               <div class="">
                 <div class="cardwhy px-3 pt-4  m-3">
                   <div class="d-flex align-items-center">
@@ -867,7 +850,8 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
+           
           </Slider>
         </div>
       </div>

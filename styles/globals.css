@@ -520,6 +520,8 @@ body a {
   width: 270px;
 }
 
+
+.style{white-space: nowrap}
 /*----------------------start media query------------------- */
 
 @media (max-width: 556px) {
