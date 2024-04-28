@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const settings = {
@@ -280,6 +281,86 @@ export default function Home() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+
+
+
+
+
+
+  const QuryUrl = useRouter();
+  // const router = useRouter();
+  // const UTM = router.query.utm_source;
+  // const liveUrl = QuryUrl.query.pageslug;
+ 
+  const liveUrlinital = QuryUrl.pathname;
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneField, setPhoneField] = useState("");
+  const [message, setMessage] = useState("");
+  const [getLoader, setLoader] = useState(false);
+  const [userMsg, setuserMsg] = useState("");
+  const [userLive, setLiveLocation] = useState();
+  const [Service, setService] = useState();
+  
+  // const [recaptchaToken, setRecaptchaToken] = useState(null);
+
+  // useEffect(() => {
+  //   fetch("https://api.testreveal.com:3013/api/get-client-location")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       console.log("UserLocation", data);
+  //       setLiveLocation(data);
+  //     })
+  //     .catch((error) => console.log(error));
+  // }, []);
+
+  const handleSubmit3 = async (e) => {
+    e.preventDefault();
+    setLoader(true);
+  
+    // Check if any field is empty
+    if (!name || !email || !phoneField || !message) {
+      alert("Please fill in all the required fields");
+      setLoader(false);
+      return;
+    }
+  
+    console.log("Sending");
+    await fetch("https://lunarsenterprises.com:2000/lunar/homepage", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        user_name: name,
+        user_mail: email,
+        page_location: liveUrlinital,
+        user_mobile: phoneField,
+        user_message: message,
+        website_source: "Lunar Seo",
+        apikey: "7dac0fcac909b349",
+      }),
+    })
+      .then((res) => {
+        console.log("Response received");
+        if (res.status === 200) {
+          console.log("Response succeeded!");
+          setuserMsg("");
+          setLoader(false);
+          alert("Our Team Will Connect You Soon");
+          //  router.push("/thank-you"); // Replace "/next-page-url" with your actual next page URL
+        } else {
+          console.log("Something went wrong...please check");
+          setLoader(false);
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        setLoader(false);
+      });
+  };
 
   return (
     <>
@@ -823,7 +904,7 @@ export default function Home() {
                   <div class="">
                   <h2 className="mt-2  "> Social Media Engagement</h2>
                   <p className="mt-1"> Silicon Institue</p>
-                    <h5>Mr. Ganeshwaran</h5>
+                    <h5>Ms.Melissa</h5>
                     <p> Silicon Institute, CEO</p>
                   </div>
            
@@ -892,13 +973,13 @@ export default function Home() {
               <div class="d-flex mb-3">
                 <i class="fas fa-phone mt-1 me-3 fs-4 color-primary iconww"></i>
                 <p class="fs-5">
-                  <a href="tel:917907574781">AE: +971 502490087</a>
+                  <a href="tel:917907574781">UAE: +971 502490087</a>
                 </p>
               </div>
               <div class="d-flex mb-3">
                 <i class="fa fa-envelope mt-1 me-3 fs-4 color-primary"></i>
                 <p class="fs-5">
-                  <a href="mailto:info@lunarenp.com">lunarenterprises.com</a>
+                  <a href="mailto:info@lunarenp.com">info@lunarenp.com</a>
                 </p>
               </div>
               <div class="d-flex mb-3">
@@ -919,73 +1000,85 @@ export default function Home() {
               </div>
             </div>
             <div class="col-lg-6 col-md-6">
-              <div class="contactform">
-                <form class="needs-validation" autocomplete="off" novalidate="">
-                  <div class="form-field has-validation">
-                    <input type="hidden" name="action" value="/" />
-
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      aria-describedby="inputGroupPrepend"
-                      placeholder="Your Name"
-                      required
-                      className="inputname"
-                    />
-
-                    <div class="invalid-feedback">Please type your Name</div>
+            <div class="contactform">
+              <form
+                onSubmit={(e) => {
+                  handleSubmit3(e);
+                }}
+                class="needs-validation"
+                autocomplete="off"
+                novalidate=""
+              >
+                <div class="form-field has-validation">
+                  <input type="hidden" name="action" value="/" />
+          
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    onChange={(e) => setName(e.target.value)}
+                    aria-describedby="inputGroupPrepend"
+                    placeholder="Your Name"
+                    required
+                    class="inputname"
+                  />
+                  <div class="invalid-feedback">Please type your Name</div>
+                </div>
+                <div class="form-field has-validation">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    onChange={(e) => setEmail(e.target.value)}
+                    aria-describedby="inputGroupPrepend"
+                    placeholder="Your Email"
+                    pattern="[a-zA-Z0-9]+.+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]{2,4}$"
+                    required=""
+                    class="inputname"
+                  />
+                  <div class="invalid-feedback">
+                    Please enter a valid email address
                   </div>
-                  <div class="form-field has-validation">
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      aria-describedby="inputGroupPrepend"
-                      placeholder="Your Email"
-                      pattern="[a-zA-Z0-9]+.+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]{2,4}$"
-                      required=""
-                      className="inputname"
-                    />
-                    <div class="invalid-feedback">
-                      Please enter valid email address
-                    </div>
-                  </div>
-                  <div class="form-field has-validation">
-                    <input
-                      type="text"
-                      id="phonefield"
-                      name="phonefield"
-                      aria-describedby="inputGroupPrepend"
-                      placeholder="Phone Number"
-                      pattern="[0-9 ,+]*"
-                      minlength="10"
-                      maxlength="14"
-                      required=""
-                      className="inputname"
-                    />
-                    <div class="invalid-feedback">Please enter phone no.</div>
-                  </div>
-                  <div class="form-field has-validation" />
+                </div>
+                <div class="form-field has-validation">
+                  <input
+                    type="text"
+                    id="phonefield"
+                    name="phonefield"
+                    onChange={(e) => setPhoneField(e.target.value)}
+                    aria-describedby="inputGroupPrepend"
+                    placeholder="Phone Number"
+                    pattern="[0-9 ,+]*"
+                    minlength="10"
+                    maxlength="14"
+                    required=""
+                    class="inputname"
+                  />
+                  <div class="invalid-feedback">Please enter phone no.</div>
+                </div>
+                <div class="form-field has-validation">
                   <textarea
                     rows="4"
                     id="comments"
                     name="comments"
                     aria-describedby="inputGroupPrepend"
                     placeholder="Enter your message here..."
+                    onChange={(e) => setMessage(e.target.value)}
                     required
-                    className="inputname"
+                    class="inputname"
                   ></textarea>
-                  <div class="invalid-feedback">Please enter message field</div>
-                </form>
-                <button
-                  type="submit"
-                  class="btn btn-primary btn-rounded btn-lg mt-5"
-                >
-                  Submit <i class="fa fa-arrow-right"></i>
-                </button>
-              </div>
+                  <div class="invalid-feedback">Please enter a message</div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-rounded btn-lg mt-3"
+                  >
+                    Submit <i class="fa fa-arrow-right"></i>
+                  </button>
+                </div>
+              </form>
             </div>
+          </div>
+          
           </div>
         </div>
       </div>
@@ -1014,8 +1107,8 @@ export default function Home() {
               </div>
               <h4>India</h4>
               <p>
-                Building A2 IFZA Business Park – <br />
-                Dubai Silicon Oasis – Dubai
+              2nd Floor MG Corporate Center Ulloor Medical College P. O <br />
+              Thiruvananthapuram Kerala 695011
               </p>
             </div>
 
@@ -1023,10 +1116,10 @@ export default function Home() {
               <div class="d-flex">
                 <img src="/images/dubai.png" class="dubai" />
               </div>
-              <h4>Dubai</h4>
+              <h4>USA</h4>
               <p>
-                Building A2 IFZA Business Park – <br />
-                Dubai Silicon Oasis – Dubai
+              12-07, FL 5, Jackson Avenue,  <br />
+              Long Island City, NY 11101, USA
               </p>
             </div>
           </div>
