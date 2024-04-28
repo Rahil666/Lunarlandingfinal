@@ -155,22 +155,24 @@ export default function Home() {
 
   const cardData = {
     "Show All": [
+   
+      { title2: "App Development", image: "https://backergysoft.com/wp-content/uploads/2022/10/ezgif.com-gif-maker-2.webp"     },
+      { title2: "Graphic Design", image: "https://backergysoft.com/wp-content/uploads/2022/09/Optimus-2D-1.jpg" },
+      { title2: "Brand Promotion", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-7.webp" },
+      { title2: "Web Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-1.webp " },
+      { title2: "IOS Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-5.webp " },
       {
-        title1: "Infinity Academy | Social Media Design",
+        title4: "Infinity Academy | Social Media Design",
         title2: "Social Media Marketing",
-        image: "/images/Mobile.png",
+        image: "  https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-4.webp",
       },
-      { title: "App Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-1.webp" },
-      { title: "Graphic Design", image: "/images/Mobile.png" },
-      { title: "Brand Promotion", image: "/images/Mobile.png" },
+
+    
       // Add more cards as needed
     ],
     "Mobile App Development": [
-      {
-        title1: "Infinity Academy | Social Media Design",
-        title2: "Mobile App Development",
-        image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-6.webp",
-      },
+      { title2: "Mobile App Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-1.webp " },
+      { title2: "Mobile App Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-5.webp " },
       // Add more cards specific to Mobile App Development
     ],
     "App Development": [
@@ -186,23 +188,28 @@ export default function Home() {
 
       { title2: "Social Media Marketing",image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker.webp" },
       { title2: "Social Media Marketing",image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-2.webp" },
-      { title2: "Social Media Marketing", image: "/images/Mobile.png" },
+    
       // Add more cards specific to Mobile App Development
     ],
     "IOS Development": [
       { title2: "IOS Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-3.webp" },
-      { title2: "IOS Development", image: "/images/Mobile.png" },
+   
       { title2: "IOS Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp" },
       { title2: "IOS Development",image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-2.webp" },
    
       // Add more cards specific to Mobile App Development
     ],
     "Brand Promotion": [
-      { title2: "Brand Promotion", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-2.webp" },
-      { title2: "Brand Promotion", image: "/images/Mobile.png" },
+      { title2: "Brand Promotion", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-6.webp" },
+      {
+        title4: "Infinity Academy | Social Media Design",
+        title2: "Brand Promotion",
+        image: "  https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-4.webp",
+      },
+      { title2: "Brand Promotion",image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-2.webp" },
       { title2: "Brand Promotion",  image: "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp" },
       { title2: "Brand Promotion",image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker.webp" },
-      { title2: "Brand Promotion", image: "/images/Mobile.png" },
+   
       // Add more cards specific to Mobile App Development
     ],
     "Web Development": [
@@ -215,10 +222,14 @@ export default function Home() {
     ],
     " 3D Design & Animation": [
       { title2: " 3D Design & Animation", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker.webp" },
-      { title2: " 3D Design & Animation", image: "/images/Mobile.png" },
+    
       { title2: " 3D Design & Animation", image: "https://backergysoft.com/wp-content/uploads/2017/06/Cipa-2-1.jpg" },
       { title2: " 3D Design & Animation", image: "/images/Mobile.png" },
-      { title2: " 3D Design & Animation",image: "https://backergysoft.com/wp-content/uploads/2017/06/Cipa-2-1.jpg" },
+      {
+        title4: "Infinity Academy | Social Media Design",
+        title2: "3D Design & Animation",
+        image: "  https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-4.webp",
+      },
 
       // Add more cards specific to Mobile App Development
     ],
