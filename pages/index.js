@@ -334,11 +334,16 @@ export default function Home() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        user_name: name,
-        user_mail: email,
+        name: name,
+        email: email,
+        phno: phoneField,
+        message
+        : message,
+
+
+
         page_location: liveUrlinital,
-        user_mobile: phoneField,
-        user_message: message,
+      
         website_source: "Lunar Seo",
         apikey: "7dac0fcac909b349",
       }),
@@ -1114,7 +1119,7 @@ export default function Home() {
 
             <div class="cardwhy px-3 pt-4 m-3 col-lg-3 col-md-4 col-sm-12 col">
               <div class="d-flex">
-                <img src="/images/dubai.png" class="dubai" />
+                <img src="/images/Usa.jpg" class="dubai" />
               </div>
               <h4>USA</h4>
               <p>
