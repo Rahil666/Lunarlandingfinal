@@ -24,7 +24,6 @@ body a {
 .scrolled-text {
   color: #000000 !important;
   white-space: nowrap !important;
-  
 }
 .scrolled-icon {
   color: #000000; /* Change to the desired color */
@@ -63,13 +62,11 @@ body a {
 .logo {
   width: 140px;
   height: 100px;
- 
 }
-.logoscrolled{
+.logoscrolled {
   margin-top: 25px;
   width: 140px;
-  height: 60px;
-
+  height: 40px;
 }
 .contentw {
   color: white;
@@ -84,7 +81,6 @@ body a {
   margin-left: 30px;
 }
 .contact-item {
-  
   padding-right: 10px;
   flex-direction: row;
   display: flex;
@@ -106,7 +102,6 @@ body a {
   padding-top: 6px;
   margin-left: 5px;
   color: white;
- 
 }
 
 .sliderstyle {
@@ -159,10 +154,10 @@ body a {
   align-items: center;
   justify-content: center;
   margin-left: 30px;
-  padding-top:5px;
-  padding-bottom:5px;
-  padding-right:15px;
-  padding-left:15px
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 #ea_banner .arrowstylee {
   margin-left: 10px;
@@ -336,10 +331,13 @@ body a {
   padding-top: 150px;
 }
 /*----------------------whypplwhyppl------------------- */
-.hegihtppl{
+.hegihtppl {
   height: 50px;
 }
-.hegihtp{
+.hegihtpbre {
+  height: 178px;
+}
+.hegihtp {
   height: 78px;
 }
 /* Style for slick dots */
@@ -535,12 +533,12 @@ body a {
 /*----------------------start media query------------------- */
 
 @media (max-width: 556px) {
-  .logo{
-   justify-content: center;
-   align-items: center;
-   display: flex;
+  .logo {
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
-  .itemhide{
+  .itemhide {
     display: none;
   }
   .header {
@@ -564,7 +562,6 @@ body a {
     display: none;
   }
   .contact-item {
-  
     /* padding-right: 40px; */
     flex-direction: row;
     display: flex;
@@ -573,8 +570,8 @@ body a {
   }
   #ea_banner h6 {
     margin-left: 4px;
-  
-    color:white;
+
+    color: white;
     font-size: 12px;
   }
   /*----------------------bannercout------------------- */
@@ -733,7 +730,6 @@ body a {
   }
 
   .contact-item {
-    
     padding-right: 10px;
     flex-direction: row;
 
@@ -784,7 +780,6 @@ body a {
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .contact-item {
- 
     padding-right: 175px;
     flex-direction: row;
     display: flex;
