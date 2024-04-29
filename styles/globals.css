@@ -1,6 +1,7 @@
 body a {
   list-style: none;
   text-decoration: none;
+  color: #000;
 }
 /*----------------------banner------------------- */
 
@@ -323,7 +324,7 @@ body a {
 .clientimg {
   width: 100%;
   height: 380px;
-  object-fit: contain;
+  
   object-position: -40px;
 }
 .centerclient {
@@ -502,6 +503,15 @@ body a {
   color: #777;
   font-size: 25px;
 }
+.form-field.has-validation {
+  position: relative;
+}
+
+.form-field.has-validation button {
+  position: absolute;
+  bottom: -55px;
+  left: 5px;
+}
 
 /*----------------------globalpresence------------------- */
 #globalpresence {
@@ -518,6 +528,8 @@ body a {
   width: 270px;
 }
 
+
+.style{white-space: nowrap}
 /*----------------------start media query------------------- */
 
 @media (max-width: 556px) {

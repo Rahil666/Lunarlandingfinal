@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../out"
+		},
+		{
+			"path": "../out/images"
+		},
+		{
+			"path": "../out/_next"
+		}
+	],
+	"settings": {}
+}
