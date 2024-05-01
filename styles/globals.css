@@ -461,7 +461,7 @@ body a {
   display: none;
   width: 100%;
   margin-top: 0.25rem;
-  font-size: 0.875em;
+  font-size: 0.975em;
   color: #dc3545;
 }
 #contactus .btn:not(.btn-sm) {
@@ -483,6 +483,22 @@ body a {
   width: 70%;
   margin-top: 20px;
 }
+
+.custom-dropdown-input.has-selection {
+  background-color: red;
+}
+.dropdown-options{
+  
+  width: 70%;
+  border: 2px solid  #7777 ;
+  
+ 
+}
+.selectedservices{
+  font-size: 1.147em;
+  padding-left:10px
+}
+
 ::-webkit-input-placeholder {
   /* WebKit/Blink browsers */
   color: #777;
@@ -506,10 +522,13 @@ body a {
 .form-field.has-validation {
   position: relative;
 }
-
+.thanks{
+  margin-top: 20px;
+  color: #5f5df2;
+}
 .form-field.has-validation button {
-  position: absolute;
-  bottom: -55px;
+  position: relative;
+  bottom: 0px;
   left: 5px;
 }
 

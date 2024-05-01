@@ -4,7 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Slider from "react-slick";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "react-bootstrap";
 import { useRouter } from "next/router";
 
@@ -300,8 +300,8 @@ export default function Home() {
   const [message, setMessage] = useState("");
   const [getLoader, setLoader] = useState(false);
   const [userMsg, setuserMsg] = useState("");
-  const [userLive, setLiveLocation] = useState();
-  const [Service, setService] = useState();
+ 
+  const [selectedOptions, setSelectedOptions] = useState([]);
   
   // const [recaptchaToken, setRecaptchaToken] = useState(null);
 
@@ -320,14 +320,14 @@ export default function Home() {
     setLoader(true);
   
     // Check if any field is empty
-    if (!name || !email || !phoneField || !message) {
+    if (!name || !email || !phoneField || !message || !selectedOptions) {
       alert("Please fill in all the required fields");
       setLoader(false);
       return;
     }
   
     console.log("Sending");
-    await fetch("https://lunarsenterprises.com:2000/lunar/homepage", {
+    await fetch("https://lunarsenterprises.com:2000/lunar/homepage-service", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -337,8 +337,8 @@ export default function Home() {
         name: name,
         email: email,
         phno: phoneField,
-        message
-        : message,
+        message: message,
+        service:selectedOptions,
 
 
 
@@ -354,7 +354,7 @@ export default function Home() {
           console.log("Response succeeded!");
           setuserMsg("");
           setLoader(false);
-          alert("Our Team Will Connect You Soon");
+          setuserMsg("Our Team Will Connect You Soon");
           //  router.push("/thank-you"); // Replace "/next-page-url" with your actual next page URL
         } else {
           console.log("Something went wrong...please check");
@@ -367,6 +367,48 @@ export default function Home() {
       });
   };
 
+  useEffect(() => {
+    // Google tag code
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-11367946432');
+  }, []);
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const options = ["3D Design & Animation",'Graphic designing','Brand Promotion','Mobile App Development',
+   'Social Media Marketing', 'Software Development','Web Development','IOS Development','App Development'];
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+  const toggleDropdowns = () => {
+    setIsOpen(isOpen);
+  };
+
+  const handleOptionClick = (option) => {
+    const index = selectedOptions.indexOf(option);
+    if (index === -1) {
+      setSelectedOptions([...selectedOptions, option]);
+    } else {
+      const updatedOptions = [...selectedOptions];
+      updatedOptions.splice(index, 1);
+      setSelectedOptions(updatedOptions);
+    }
+  };
+  const dropdownRef = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+    
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <>
       <Head>
@@ -1061,31 +1103,67 @@ export default function Home() {
                   />
                   <div class="invalid-feedback">Please enter phone no.</div>
                 </div>
+
+                <div className="custom-dropdown has-validation" ref={dropdownRef}>
+                <input
+                  type="text"
+                  class="inputname"
+                  onClick={toggleDropdown}
+                  placeholder="Our Services"
+                  value={selectedOptions.join(', ')}
+                  readOnly
+                />
+                {isOpen && (
+                  <div className="dropdown-options mt-3 ">
+                    {options.map((option, index) => (
+                      <div
+                        key={index}
+                        className={`option ${selectedOptions.includes(option) ? 'selectedservices m-1' : 'm-1 selectedservices'}` }
+                        onClick={() => handleOptionClick(option)}
+                        style={{  zIndex: '999',backgroundColor: selectedOptions.includes(option) ? 'blue' : 'transparent' }}
+                      >
+                        {option}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+
                 <div class="form-field has-validation">
                   <textarea
                     rows="4"
                     id="comments"
                     name="comments"
+                    
+                  
                     aria-describedby="inputGroupPrepend"
                     placeholder="Enter your message here..."
                     onChange={(e) => setMessage(e.target.value)}
                     required
                     class="inputname"
                   ></textarea>
-                  <div class="invalid-feedback">Please enter a message</div>
-                  <button
-                    type="submit"
-                    class="btn btn-primary btn-rounded btn-lg mt-3"
-                  >
-                    Submit <i class="fa fa-arrow-right"></i>
-                  </button>
+                
+                <div>
+                <div class="invalid-feedback">Please enter a message</div>
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-rounded btn-lg mt-3"
+                >
+                  Submit <i class="fa fa-arrow-right"></i>
+                </button>
+              </div>
                 </div>
               </form>
+              <h5 className="thanks">{userMsg}</h5>
             </div>
+    
           </div>
-          
+         
           </div>
+    
         </div>
+    
       </div>
 
       <div id="globalpresence">
