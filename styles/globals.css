@@ -324,7 +324,7 @@ body a {
 .clientimg {
   width: 100%;
   height: 380px;
-  
+
   object-position: -40px;
 }
 .centerclient {
@@ -487,16 +487,18 @@ body a {
 .custom-dropdown-input.has-selection {
   background-color: red;
 }
-.dropdown-options{
-  
+.dropdown-options {
   width: 70%;
-  border: 2px solid  #7777 ;
-  
- 
+  border: 2px solid #7777;
 }
-.selectedservices{
+.selectedservices {
   font-size: 1.147em;
-  padding-left:10px
+  padding-left: 10px;
+}
+.selectedservicesed {
+  color: #eff7ff;
+  font-size: 1.147em;
+  padding-left: 10px;
 }
 
 ::-webkit-input-placeholder {
@@ -522,7 +524,7 @@ body a {
 .form-field.has-validation {
   position: relative;
 }
-.thanks{
+.thanks {
   margin-top: 20px;
   color: #5f5df2;
 }
@@ -547,8 +549,9 @@ body a {
   width: 270px;
 }
 
-
-.style{white-space: nowrap}
+.style {
+  white-space: nowrap;
+}
 /*----------------------start media query------------------- */
 
 @media (max-width: 556px) {
