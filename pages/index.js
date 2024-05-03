@@ -4,9 +4,9 @@ import Head from "next/head";
 import Link from "next/link";
 import Slider from "react-slick";
 import { AnimatePresence, motion } from "framer-motion";
+import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "react-bootstrap";
-import { useRouter } from "next/router";
 
 export default function Home() {
   const settings = {
@@ -156,91 +156,203 @@ export default function Home() {
 
   const cardData = {
     "Show All": [
-   
-      { title2: "App Development", image: "https://backergysoft.com/wp-content/uploads/2022/10/ezgif.com-gif-maker-2.webp"     },
-      { title2: "Graphic Design", image: "https://backergysoft.com/wp-content/uploads/2022/09/Optimus-2D-1.jpg" },
-      { title2: "Brand Promotion", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-7.webp" },
-      { title2: "Web Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-1.webp " },
-      { title2: "IOS Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-5.webp " },
+      {
+        title2: "App Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2022/10/ezgif.com-gif-maker-2.webp",
+      },
+      {
+        title2: "Graphic Design",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2022/09/Optimus-2D-1.jpg",
+      },
+      {
+        title2: "Brand Promotion",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-7.webp",
+      },
+      {
+        title2: "Web Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-1.webp ",
+      },
+      {
+        title2: "IOS Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-5.webp ",
+      },
       {
         title4: "Infinity Academy | Social Media Design",
         title2: "Social Media Marketing",
-        image: "  https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-4.webp",
+        image:
+          "  https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-4.webp",
       },
 
-    
       // Add more cards as needed
     ],
     "Mobile App Development": [
-      { title2: "Mobile App Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-1.webp " },
-      { title2: "Mobile App Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-5.webp " },
+      {
+        title2: "Mobile App Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-1.webp ",
+      },
+      {
+        title2: "Mobile App Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-5.webp ",
+      },
       // Add more cards specific to Mobile App Development
     ],
     "App Development": [
-      { title2: "App Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-5.webp" },
+      {
+        title2: "App Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-5.webp",
+      },
 
-      { title2: "App Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/Robotics.webp" },
+      {
+        title2: "App Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/Robotics.webp",
+      },
       { title2: "App Development", image: "/images/Mobile.png" },
-      { title2: "App Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp" },
+      {
+        title2: "App Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp",
+      },
       // Add more cards specific to Mobile App Development
     ],
     " Social Media Marketing": [
-      { title2: "Social Media Marketing", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-4.webp" },
+      {
+        title2: "Social Media Marketing",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-4.webp",
+      },
 
-      { title2: "Social Media Marketing",image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker.webp" },
-      { title2: "Social Media Marketing",image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-2.webp" },
-    
+      {
+        title2: "Social Media Marketing",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker.webp",
+      },
+      {
+        title2: "Social Media Marketing",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-2.webp",
+      },
+
       // Add more cards specific to Mobile App Development
     ],
     "IOS Development": [
-      { title2: "IOS Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-3.webp" },
-   
-      { title2: "IOS Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp" },
-      { title2: "IOS Development",image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-2.webp" },
-   
+      {
+        title2: "IOS Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-3.webp",
+      },
+
+      {
+        title2: "IOS Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp",
+      },
+      {
+        title2: "IOS Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-2.webp",
+      },
+
       // Add more cards specific to Mobile App Development
     ],
     "Brand Promotion": [
-      { title2: "Brand Promotion", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-6.webp" },
+      {
+        title2: "Brand Promotion",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-6.webp",
+      },
       {
         title4: "Infinity Academy | Social Media Design",
         title2: "Brand Promotion",
-        image: "  https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-4.webp",
+        image:
+          "  https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-4.webp",
       },
-      { title2: "Brand Promotion",image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-2.webp" },
-      { title2: "Brand Promotion",  image: "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp" },
-      { title2: "Brand Promotion",image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker.webp" },
-   
+      {
+        title2: "Brand Promotion",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-2.webp",
+      },
+      {
+        title2: "Brand Promotion",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp",
+      },
+      {
+        title2: "Brand Promotion",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker.webp",
+      },
+
       // Add more cards specific to Mobile App Development
     ],
     "Web Development": [
-      { title2: "Web Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/Optimus-Robo.webp" },
-      { title2: "Web Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp" },
-      { title2: "Web Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/Robotics.webp" },
+      {
+        title2: "Web Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/Optimus-Robo.webp",
+      },
+      {
+        title2: "Web Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp",
+      },
+      {
+        title2: "Web Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/Robotics.webp",
+      },
 
       { title2: "Web Development", image: "/images/Mobile.png" },
-      
     ],
     " 3D Design & Animation": [
-      { title2: " 3D Design & Animation", image: "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker.webp" },
-    
-      { title2: " 3D Design & Animation", image: "https://backergysoft.com/wp-content/uploads/2017/06/Cipa-2-1.jpg" },
+      {
+        title2: " 3D Design & Animation",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker.webp",
+      },
+
+      {
+        title2: " 3D Design & Animation",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/Cipa-2-1.jpg",
+      },
       { title2: " 3D Design & Animation", image: "/images/Mobile.png" },
       {
         title4: "Infinity Academy | Social Media Design",
         title2: "3D Design & Animation",
-        image: "  https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-4.webp",
+        image:
+          "  https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-4.webp",
       },
 
       // Add more cards specific to Mobile App Development
     ],
     "Graphic designing": [
-      { title2: "Graphic designing", image: "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp" },
+      {
+        title2: "Graphic designing",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp",
+      },
       // Add more cards specific to Mobile App Development
     ],
     "Software Development": [
-      { title2: "Software Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/Cipa-2-1.jpg" },
-      { title2: "Software Development", image: "https://backergysoft.com/wp-content/uploads/2017/06/Robotics.webp" },
+      {
+        title2: "Software Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/Cipa-2-1.jpg",
+      },
+      {
+        title2: "Software Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/Robotics.webp",
+      },
       // Add more cards specific to Mobile App Development
       // Add more cards specific to Mobile App Development
     ],
@@ -282,27 +394,21 @@ export default function Home() {
     };
   }, []);
 
-
-
-
-
-
-
   const QuryUrl = useRouter();
   // const router = useRouter();
   // const UTM = router.query.utm_source;
   // const liveUrl = QuryUrl.query.pageslug;
- 
+
   const liveUrlinital = QuryUrl.pathname;
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneField, setPhoneField] = useState("");
   const [message, setMessage] = useState("");
-  const [getLoader, setLoader] = useState(false);
-  const [userMsg, setuserMsg] = useState("");
- 
+  const [loader, setLoader] = useState(false);
+  const [userMsg, setUserMsg] = useState("");
+
   const [selectedOptions, setSelectedOptions] = useState([]);
-  
+
   // const [recaptchaToken, setRecaptchaToken] = useState(null);
 
   // useEffect(() => {
@@ -318,14 +424,14 @@ export default function Home() {
   const handleSubmit3 = async (e) => {
     e.preventDefault();
     setLoader(true);
-  
+
     // Check if any field is empty
     if (!name || !email || !phoneField || !message || !selectedOptions) {
       alert("Please fill in all the required fields");
       setLoader(false);
       return;
     }
-  
+
     console.log("Sending");
     await fetch("https://lunarsenterprises.com:2000/lunar/homepage-service", {
       method: "POST",
@@ -338,46 +444,56 @@ export default function Home() {
         email: email,
         phno: phoneField,
         message: message,
-        service:selectedOptions,
-
-
+        service: selectedOptions,
 
         page_location: liveUrlinital,
-      
+
         website_source: "Lunar Seo",
         apikey: "7dac0fcac909b349",
       }),
     })
-      .then((res) => {
-        console.log("Response received");
-        if (res.status === 200) {
-          console.log("Response succeeded!");
-          setuserMsg("");
-          setLoader(false);
-          setuserMsg("Our Team Will Connect You Soon");
-          //  router.push("/thank-you"); // Replace "/next-page-url" with your actual next page URL
-        } else {
-          console.log("Something went wrong...please check");
-          setLoader(false);
-        }
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        setLoader(false);
-      });
-  };
+    .then((res) => {
+      console.log("Response received");
+      if (res.status === 200) {
+        console.log("Response succeeded!");
+        setUserMsg("Our Team Will Connect You Soon");
+        // alert("Our Team Will Connect You Soon");
+      } else {
+        console.log("Something went wrong...please check");
+        alert("Something went wrong...please try again later");
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      alert("Error occurred, please try again later");
+    })
+    .finally(() => {
+      setLoader(false);
+    });
+};
 
   useEffect(() => {
     // Google tag code
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-11367946432');
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "AW-11367946432");
   }, []);
   const [isOpen, setIsOpen] = useState(false);
-  
-  const options = ["3D Design & Animation",'Graphic designing','Brand Promotion','Mobile App Development',
-   'Social Media Marketing', 'Software Development','Web Development','IOS Development','App Development'];
+
+  const options = [
+    " Digital Marketing ",
+    "3D Design & Animation",
+    "Graphic designing",
+    "Brand Promotion",
+    "Mobile App Development",
+    "Social Media Marketing",
+    "Software Development",
+    "Web Development",
+    "IOS Development",
+  ];
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -403,7 +519,7 @@ export default function Home() {
         setIsOpen(false);
       }
     };
-    
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -432,7 +548,6 @@ export default function Home() {
                           : "/images/lunar white.png"
                       }
                       className={scrolled ? "logoscrolled" : "logo"}
-                    
                       alt="Image 1"
                     />
                   </a>
@@ -540,14 +655,14 @@ export default function Home() {
                 thrive online.
               </p>
               <div className="align-content-center   ">
-              <a href='#contactus'>
-                <button className="buttonstyle " >
-                  Contact Us
-                  <i
-                    class="fa fa-chevron-right  arrowstylee"
-                    aria-hidden="true"
-                  ></i>
-                </button>
+                <a href="#contactus">
+                  <button className="buttonstyle ">
+                    Contact Us
+                    <i
+                      class="fa fa-chevron-right  arrowstylee"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
                 </a>
               </div>
             </div>
@@ -882,100 +997,77 @@ export default function Home() {
             <div>
               <div class=" ">
                 <div class="cardwhy px-3 pt-4  m-3">
-                <a href="https://www.instagram.com/aimglobalbusinesscorp/">
-                  <div class=" align-items-center">
-                  {/*<img src="/images/ananthu.webp" class="round" /> */}  
-                    <div class="">
-                    <h2 className="mt-2 ">SEO Transformation</h2>
-                    <p className="mt-1">AIM Business Corp</p>
-                      <h5>Numan Mustafa</h5>
-                      <p> Aims Business Corp, Project Manager</p>
+                  <a href="https://www.instagram.com/aimglobalbusinesscorp/">
+                    <div class=" align-items-center">
+                      {/*<img src="/images/ananthu.webp" class="round" /> */}
+                      <div class="">
+                        <h2 className="mt-2 ">SEO Transformation</h2>
+                        <p className="mt-1">AIM Business Corp</p>
+                        <h5>Numan Mustafa</h5>
+                        <p> Aims Business Corp, Project Manager</p>
+                      </div>
                     </div>
-             
-                   
-                  </div>
-                
-                  <p>
-                  Lunar Enterprises did a great job on
-                  increasing website traffic I'd
-                  recommend them for optimising the
-                  website engagement and traffic.
-                   
-                  </p>
-                  <div className='hegippl'>
-                    
-                  </div>
+
+                    <p>
+                      Lunar Enterprises did a great job on increasing website
+                      traffic I'd recommend them for optimising the website
+                      engagement and traffic.
+                    </p>
+                    <div className="hegippl"></div>
                   </a>
                 </div>
-                
               </div>
             </div>
 
             <div>
               <div class="">
                 <div class="cardwhy px-3 pt-4  m-3">
-                <a href="https://www.instagram.com/legendmaritime/">
-                <div class=" align-items-center">
-                {/*<img src="/images/ananthu.webp" class="round" /> */}  
-                  <div class="">
-                  <h2 className="mt-2 "> Digital Marketing</h2>
-                  <p className="mt-1">Legend Maritime Cargo</p>
-                    <h5>Faiqa Farooq</h5>
-                    <p> legend Maritime Cargo, Manager</p>
-                  </div>
-           
-                 
-                </div>
-                
-                  <p>
-                  Lunar Enterprises has been
- professional in providing quality leads
- which helped us to increase our revenue
- by 135% in 2023 last quarter
-                  </p>
-                  <div className='hegi'>
-                    
-                  </div>
+                  <a href="https://www.instagram.com/legendmaritime/">
+                    <div class=" align-items-center">
+                      {/*<img src="/images/ananthu.webp" class="round" /> */}
+                      <div class="">
+                        <h2 className="mt-2 "> Digital Marketing</h2>
+                        <p className="mt-1">Legend Maritime Cargo</p>
+                        <h5>Faiqa Farooq</h5>
+                        <p> legend Maritime Cargo, Manager</p>
+                      </div>
+                    </div>
+
+                    <p>
+                      Lunar Enterprises has been professional in providing
+                      quality leads which helped us to increase our revenue by
+                      135% in 2023 last quarter
+                    </p>
+                    <div className="hegi"></div>
                   </a>
                 </div>
-                
               </div>
-              
             </div>
             <div>
               <div class="">
                 <div class="cardwhy px-3 pt-4  m-3">
-                <a href="https://www.instagram.com/siliconinstitutedubai/">
-                <div class=" align-items-center">
-                {/*<img src="/images/ananthu.webp" class="round" /> */}  
-                  <div class="">
-                  <h2 className="mt-2  "> Social Media Engagement</h2>
-                  <p className="mt-1"> Silicon Institue</p>
-                    <h5>Ms.Melissa</h5>
-                    <p> Silicon Institute, CEO</p>
-                  </div>
-           
-                 
-                </div>
-                  
-                  <p>
-                  Their professional and elegant posters
-                  has increased brand awareness and
-                  engagement among students and
-                  parents
-                  </p>
-                  <div className='heg'>
-                    
-                  </div>
+                  <a href="https://www.instagram.com/siliconinstitutedubai/">
+                    <div class=" align-items-center">
+                      {/*<img src="/images/ananthu.webp" class="round" /> */}
+                      <div class="">
+                        <h2 className="mt-2  "> Social Media Engagement</h2>
+                        <p className="mt-1"> Silicon Institue</p>
+                        <h5>Ms.Melissa</h5>
+                        <p> Silicon Institute, CEO</p>
+                      </div>
+                    </div>
+
+                    <p>
+                      Their professional and elegant posters has increased brand
+                      awareness and engagement among students and parents
+                    </p>
+                    <div className="heg"></div>
                   </a>
                 </div>
-               
               </div>
             </div>
 
-         
-
-           {/* <div>
+            {/* <div>
               <div class="">
                 <div class="cardwhy px-3 pt-4  m-3">
                   <div class="d-flex align-items-center">
@@ -999,7 +1091,6 @@ export default function Home() {
                 </div>
               </div>
             </div> */}
-           
           </Slider>
         </div>
       </div>
@@ -1030,140 +1121,145 @@ export default function Home() {
                 </p>
               </div>
               <div class="d-flex mb-3">
-
-              <a href="https://api.whatsapp.com/send/?phone=%2B917025715775&text=Hello+from+your+website&type=phone_number&app_absent=0">
-                <i class="fa-brands fa-square-whatsapp mt-1 me-3 fs-2 color-primary"></i>
+                <a href="https://api.whatsapp.com/send/?phone=%2B917025715775&text=Hello+from+your+website&type=phone_number&app_absent=0">
+                  <i class="fa-brands fa-square-whatsapp mt-1 me-3 fs-2 color-primary"></i>
                 </a>
                 <a href="https://www.facebook.com/lunarenterprises.in">
-                <i class="fa-brands fa-facebook  mt-1 me-3 fs-2 color-primary"></i>
+                  <i class="fa-brands fa-facebook  mt-1 me-3 fs-2 color-primary"></i>
                 </a>
                 <a href="https://www.instagram.com/lunarenterprises_india/">
-                <i class="fa-brands fa-square-instagram  mt-1 me-3 fs-2 color-primary"></i>
+                  <i class="fa-brands fa-square-instagram  mt-1 me-3 fs-2 color-primary"></i>
                 </a>
-               
+
                 <a href="https://twitter.com/Lunarenter37682">
-                <i class="fa-brands fa-square-x-twitter  mt-1 me-3 fs-2 color-primary"></i>
+                  <i class="fa-brands fa-square-x-twitter  mt-1 me-3 fs-2 color-primary"></i>
                 </a>
               </div>
             </div>
             <div class="col-lg-6 col-md-6">
-            <div class="contactform">
-              <form
-                onSubmit={(e) => {
-                  handleSubmit3(e);
-                }}
-                class="needs-validation"
-                autocomplete="off"
-                novalidate=""
-              >
-                <div class="form-field has-validation">
-                  <input type="hidden" name="action" value="/" />
-          
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    onChange={(e) => setName(e.target.value)}
-                    aria-describedby="inputGroupPrepend"
-                    placeholder="Your Name"
-                    required
-                    class="inputname"
-                  />
-                  <div class="invalid-feedback">Please type your Name</div>
-                </div>
-                <div class="form-field has-validation">
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    onChange={(e) => setEmail(e.target.value)}
-                    aria-describedby="inputGroupPrepend"
-                    placeholder="Your Email"
-                    pattern="[a-zA-Z0-9]+.+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]{2,4}$"
-                    required=""
-                    class="inputname"
-                  />
-                  <div class="invalid-feedback">
-                    Please enter a valid email address
-                  </div>
-                </div>
-                <div class="form-field has-validation">
-                  <input
-                    type="text"
-                    id="phonefield"
-                    name="phonefield"
-                    onChange={(e) => setPhoneField(e.target.value)}
-                    aria-describedby="inputGroupPrepend"
-                    placeholder="Phone Number"
-                    pattern="[0-9 ,+]*"
-                    minlength="10"
-                    maxlength="14"
-                    required=""
-                    class="inputname"
-                  />
-                  <div class="invalid-feedback">Please enter phone no.</div>
-                </div>
-
-                <div className="custom-dropdown has-validation" ref={dropdownRef}>
-                <input
-                  type="text"
-                  class="inputname"
-                  onClick={toggleDropdown}
-                  placeholder="Our Services"
-                  value={selectedOptions.join(', ')}
-                  readOnly
-                />
-                {isOpen && (
-                  <div className="dropdown-options mt-3 ">
-                    {options.map((option, index) => (
-                      <div
-                        key={index}
-                        className={`option ${selectedOptions.includes(option) ? 'selectedservices m-1' : 'm-1 selectedservices'}` }
-                        onClick={() => handleOptionClick(option)}
-                        style={{  zIndex: '999',backgroundColor: selectedOptions.includes(option) ? 'blue' : 'transparent' }}
-                      >
-                        {option}
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-
-                <div class="form-field has-validation">
-                  <textarea
-                    rows="4"
-                    id="comments"
-                    name="comments"
-                    
-                  
-                    aria-describedby="inputGroupPrepend"
-                    placeholder="Enter your message here..."
-                    onChange={(e) => setMessage(e.target.value)}
-                    required
-                    class="inputname"
-                  ></textarea>
-                
-                <div>
-                <div class="invalid-feedback">Please enter a message</div>
-                <button
-                  type="submit"
-                  class="btn btn-primary btn-rounded btn-lg mt-3"
+              <div class="contactform">
+                <form
+                  onSubmit={(e) => {
+                    handleSubmit3(e);
+                  }}
+                  class="needs-validation"
+                  autocomplete="off"
+                  novalidate=""
                 >
-                  Submit <i class="fa fa-arrow-right"></i>
-                </button>
+                  <div class="form-field has-validation">
+                    <input type="hidden" name="action" value="/" />
+
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      onChange={(e) => setName(e.target.value)}
+                      aria-describedby="inputGroupPrepend"
+                      placeholder="Your Name"
+                      required
+                      class="inputname"
+                    />
+                    <div class="invalid-feedback">Please type your Name</div>
+                  </div>
+                  <div class="form-field has-validation">
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      onChange={(e) => setEmail(e.target.value)}
+                      aria-describedby="inputGroupPrepend"
+                      placeholder="Your Email"
+                      pattern="[a-zA-Z0-9]+.+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]{2,4}$"
+                      required=""
+                      class="inputname"
+                    />
+                    <div class="invalid-feedback">
+                      Please enter a valid email address
+                    </div>
+                  </div>
+                  <div class="form-field has-validation">
+                    <input
+                      type="text"
+                      id="phonefield"
+                      name="phonefield"
+                      onChange={(e) => setPhoneField(e.target.value)}
+                      aria-describedby="inputGroupPrepend"
+                      placeholder="Phone Number"
+                      pattern="[0-9 ,+]*"
+                      minlength="10"
+                      maxlength="14"
+                      required=""
+                      class="inputname"
+                    />
+                    <div class="invalid-feedback">Please enter phone no.</div>
+                  </div>
+
+                  <div
+                    className="custom-dropdown has-validation"
+                    ref={dropdownRef}
+                  >
+                    <input
+                      type="text"
+                      class="inputname"
+                      onClick={toggleDropdown}
+                      placeholder="Our Services"
+                      value={selectedOptions.join(", ")}
+                      readOnly
+                    />
+                    {isOpen && (
+                      <div className="dropdown-options mt-3 ">
+                        {options.map((option, index) => (
+                          <div
+                            key={index}
+                            className={`option ${
+                              selectedOptions.includes(option)
+                                ? "selectedservicesed m-1"
+                                : "m-1 selectedservices"
+                            }`}
+                            onClick={() => handleOptionClick(option)}
+                            style={{
+                              zIndex: "999",
+                              backgroundColor: selectedOptions.includes(option)
+                                ? "blue"
+                                : "transparent",
+                            }}
+                          >
+                            {option}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  <div class="form-field has-validation">
+                    <textarea
+                      rows="4"
+                      id="comments"
+                      name="comments"
+                      aria-describedby="inputGroupPrepend"
+                      placeholder="Enter your message here..."
+                      onChange={(e) => setMessage(e.target.value)}
+                      required
+                      class="inputname"
+                    ></textarea>
+
+                    <div>
+                      <div class="invalid-feedback">Please enter a message</div>
+                      <button
+                        type="submit"
+                        class="btn btn-primary btn-rounded btn-lg mt-3"
+                        disabled={loader} // Disable button when loader is active
+                      >
+                      {loader ? "Loading..." : "Submit"} <i class="fa fa-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <h5 className="thanks">{userMsg}</h5>
               </div>
-                </div>
-              </form>
-              <h5 className="thanks">{userMsg}</h5>
             </div>
-    
           </div>
-         
-          </div>
-    
         </div>
-    
       </div>
 
       <div id="globalpresence">
@@ -1190,8 +1286,8 @@ export default function Home() {
               </div>
               <h4>India</h4>
               <p>
-              2nd Floor MG Corporate Center Ulloor Medical College P. O <br />
-              Thiruvananthapuram Kerala 695011
+                2nd Floor MG Corporate Center Ulloor Medical College P. O <br />
+                Thiruvananthapuram Kerala 695011
               </p>
             </div>
 
@@ -1201,8 +1297,8 @@ export default function Home() {
               </div>
               <h4>USA</h4>
               <p>
-              12-07, FL 5, Jackson Avenue,  <br />
-              Long Island City, NY 11101, USA
+                12-07, FL 5, Jackson Avenue, <br />
+                Long Island City, NY 11101, USA
               </p>
             </div>
           </div>
