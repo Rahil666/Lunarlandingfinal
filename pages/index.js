@@ -312,34 +312,81 @@ export default function Home() {
 
       { title2: "Web Development", image: "/images/Mobile.png" },
     ],
+
+
+    "Digital Marketing": [
+      {
+        title2: "Digital Marketing",
+        title1: "Digital Marketing",
+        image:
+          '/images/keyword2.jpg',
+      },
+      {
+        title2: "Digital Marketing",
+        title1: "Digital Marketing",
+        image:
+          '/images/keyword.jpg',
+      },
+  
+    ],
     " 3D Design & Animation": [
       {
         title2: " 3D Design & Animation",
+        title1: " 3D Design & Animation",
         image:
-          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker.webp",
+          "/images/animation icon.jpg",
       },
 
-      {
-        title2: " 3D Design & Animation",
-        image:
-          "https://backergysoft.com/wp-content/uploads/2017/06/Cipa-2-1.jpg",
-      },
-      { title2: " 3D Design & Animation", image: "/images/Mobile.png" },
-      {
-        title4: "Infinity Academy | Social Media Design",
-        title2: "3D Design & Animation",
-        image:
-          "  https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-4.webp",
-      },
+    
 
       // Add more cards specific to Mobile App Development
     ],
     "Graphic designing": [
       {
+      
         title2: "Graphic designing",
+        title: "Graphic designing",
         image:
-          "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp",
+          "/images/graphics design 3.jpg",
       },
+
+      {
+      
+        title2: "Graphic designing",
+        title: "Graphic designing",
+        image:
+          "/images/graphics design 1.jpg",
+      },
+      {
+      
+        title2: "Graphic designing",
+        title: "Graphic designing",
+        image:
+          "/images/package.jpg",
+      },
+      {
+      
+        title2: "Graphic designing",
+        title: "Graphic designing",
+        image:
+          "/images/graphics design 2.jpg",
+      },
+      {
+      
+        title2: "Graphic designing",
+        title: "Graphic designing",
+        image:
+          "/images/brochure.jpg",
+      },
+      {
+      
+        title2: "Graphic designing",
+        title: "Graphic designing",
+        image:
+          "/images/presentation.jpg",
+      },
+    
+
       // Add more cards specific to Mobile App Development
     ],
     "Software Development": [
@@ -525,6 +572,7 @@ export default function Home() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+  
   return (
     <>
       <Head>
@@ -534,6 +582,42 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+
+
+      
+      <div class="side-bars" style={{zIndex:999}}>
+      <div class="s-bar clearfix" style={{right:0}}>
+        <a href="tel:+917907574781" class="clicktocall">
+          <span class="call-spr "><svg class="svg-inline--fa fa-mobile-alt fa-w-10"
+           aria-hidden="true" data-prefix="fas" data-icon="mobile-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+           <path fill="currentColor" d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z">
+           </path>
+           </svg>
+          </span>
+          <h4>Mobile:</h4>
+          <h3 class="pnumlive"><div class="textwidget custom-html-widget">+91 7907574781</div></h3>
+        </a>
+      </div>
+ 
+    </div>
+
+    <div class="side-barss mt-0" style={{zIndex:999}}>
+
+    <div class="s-barss clearfixs  " style={{right: 0}}>
+    <a href="https://api.whatsapp.com/send?phone=7907574781&amp;text= Hi Lunar Seo Team,"  target="_blank" title="Live Chat" class="chatwraps">
+      <div class="chat-sprs"><svg class="svg-inline--fa fa-whatsapp fa-w-14" aria-hidden="true" data-prefix="fab" data-icon="whatsapp"
+       role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+       <path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
+       </path>
+      </svg>
+   
+      
+      </div>
+      <h4>Whatsapp:</h4>
+      <h3 class="pnumlives"><div class="textwidget custom-html-widget"> +91 7907574781</div></h3>
+    </a>
+  </div>
+  </div>
       <div id="ea_banner">
         <div className="ea_banner-o ">
           <div className={scrolled ? "header scrolled" : "header"}>
@@ -555,8 +639,8 @@ export default function Home() {
                 <div class="col-md-6 d-flex align-items-center item">
                   <div class="col-12 itemhide">
                     <div class="d-flex">
-                      <div class="col-md-5 col-4 contact-item  ">
-                        <i
+                      <div class="col-md-4 col-3 contact-item  ">
+                       {/* <i
                           className={
                             scrolled
                               ? "fas fa-phone  scrolled-icon"
@@ -573,6 +657,30 @@ export default function Home() {
                             0471-3592716
                           </h6>
                         </a>
+
+
+
+
+ */}
+                       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        
                       </div>
                       <div class="col-md-4 col-5 contact-item">
                         <i
@@ -609,7 +717,7 @@ export default function Home() {
                               scrolled ? "scrolled-text" : "colorchange"
                             }
                           >
-                            917907574781
+                            +91 7907574781
                           </h6>
                         </a>
                       </div>
@@ -749,7 +857,7 @@ export default function Home() {
       <div id="tabsection">
         <div className="container-fluid ">
           {/* Tab buttons */}
-          <div className="itemdis">
+          <div className="">
             <div className="row text-center mb-3 d-flex justify-content-center align-items-center tabiss itemdis">
               {Object.keys(cardData).map((tabName, index) => (
                 <div
@@ -765,21 +873,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="itemdissec">
-            <div className="d-flex overflow-x-scroll tabiss ">
-              {Object.keys(cardData).map((tabName, index) => (
-                <div
-                  className={`col-md-2 col-4 text-center d-flex justify-content-center align-items-center tab ${
-                    selectedTab === tabName ? "active-tab" : "non-active"
-                  }`}
-                  key={index}
-                  onClick={() => handleTabClick(tabName)}
-                >
-                  <h6 className="text-wrap justify-center">{tabName}</h6>
-                </div>
-              ))}
-            </div>
-          </div>
+        
           {/* Card data */}
           <div className="row">
             {cardData[selectedTab].map((card, index) => (
@@ -1105,13 +1199,13 @@ export default function Home() {
               <div class="d-flex mb-3">
                 <i class="fas fa-phone mt-1 me-3 fs-4 color-primary iconww"></i>
                 <p class="fs-5">
-                  <a href="tel:917907574781">India: +91 7347482489</a>
+                  <a href="tel:917907574781">India: +91 7907574781</a>
                 </p>
               </div>
               <div class="d-flex mb-3">
                 <i class="fas fa-phone mt-1 me-3 fs-4 color-primary iconww"></i>
                 <p class="fs-5">
-                  <a href="tel:917907574781">UAE: +971 502490087</a>
+                  <a href="tel:971502490087">UAE: +971 502490087</a>
                 </p>
               </div>
               <div class="d-flex mb-3">
@@ -1121,7 +1215,7 @@ export default function Home() {
                 </p>
               </div>
               <div class="d-flex mb-3">
-                <a href="https://api.whatsapp.com/send/?phone=%2B917025715775&text=Hello+from+your+website&type=phone_number&app_absent=0">
+                <a href="https://api.whatsapp.com/send?phone=7907574781&amp;text= Hi Lunar Seo Team,">
                   <i class="fa-brands fa-square-whatsapp mt-1 me-3 fs-2 color-primary"></i>
                 </a>
                 <a href="https://www.facebook.com/lunarenterprises.in">
