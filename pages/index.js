@@ -157,182 +157,318 @@ export default function Home() {
   const cardData = {
     "Show All": [
       {
+        title1: "Mobile App | IOS",
         title2: "App Development",
         image:
-          "https://backergysoft.com/wp-content/uploads/2022/10/ezgif.com-gif-maker-2.webp",
-      },
-      {
-        title2: "Graphic Design",
-        image:
-          "https://backergysoft.com/wp-content/uploads/2022/09/Optimus-2D-1.jpg",
-      },
-      {
-        title2: "Brand Promotion",
-        image:
-          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-7.webp",
-      },
-      {
-        title2: "Web Development",
-        image:
           "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-1.webp ",
       },
+  
       {
-        title2: "IOS Development",
-        image:
-          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-5.webp ",
-      },
-      {
-        title4: "Infinity Academy | Social Media Design",
-        title2: "Social Media Marketing",
-        image:
-          "  https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-4.webp",
-      },
-
-      // Add more cards as needed
-    ],
-    "Mobile App Development": [
-      {
-        title2: "Mobile App Development",
-        image:
-          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-1.webp ",
-      },
-      {
-        title2: "Mobile App Development",
-        image:
-          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-5.webp ",
-      },
-      // Add more cards specific to Mobile App Development
-    ],
-    "App Development": [
-      {
+        title1: "Mobile App | IOS",
         title2: "App Development",
         image:
           "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-5.webp",
       },
 
       {
+        title1: "Mobile App | IOS",
         title2: "App Development",
         image:
           "https://backergysoft.com/wp-content/uploads/2017/06/Robotics.webp",
       },
-      { title2: "App Development", image: "/images/Mobile.png" },
+    
+     
       {
+        title1: "Mobile App | IOS",
         title2: "App Development",
-        image:
-          "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp",
-      },
-      // Add more cards specific to Mobile App Development
-    ],
-    " Social Media Marketing": [
-      {
-        title2: "Social Media Marketing",
-        image:
-          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-4.webp",
-      },
-
-      {
-        title2: "Social Media Marketing",
-        image:
-          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker.webp",
-      },
-      {
-        title2: "Social Media Marketing",
-        image:
-          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-2.webp",
-      },
-
-      // Add more cards specific to Mobile App Development
-    ],
-    "IOS Development": [
-      {
-        title2: "IOS Development",
         image:
           "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-3.webp",
       },
 
       {
-        title2: "IOS Development",
+        title1: "Mobile App | IOS",
+        title2: "App Development",
         image:
           "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp",
       },
       {
-        title2: "IOS Development",
+        title1: "Mobile App | IOS",
+        title2: "App Development",
         image:
           "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-2.webp",
       },
 
-      // Add more cards specific to Mobile App Development
-    ],
-    "Brand Promotion": [
       {
-        title2: "Brand Promotion",
+      
+        title1: "Bhakshanagal | Web development & Web design",
+        title2: "Web Development & Web design",
         image:
-          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-6.webp",
+          "/images/graphics design 1.jpg",
       },
       {
-        title4: "Infinity Academy | Social Media Design",
-        title2: "Brand Promotion",
+        title1: "Mayon Pager Bags | Web development & Web design",
+        title2: "Web Development & Web design ",
         image:
-          "  https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-4.webp",
+          " https://backergysoft.com/wp-content/uploads/2022/10/ezgif.com-gif-maker-2-600x450.webp",
       },
       {
-        title2: "Brand Promotion",
+        title1: "Sahasrara Cinemas | UI/UX design & Web development",
+        title2: "Web Development & Web design ",
         image:
-          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-2.webp",
-      },
-      {
-        title2: "Brand Promotion",
-        image:
-          "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp",
-      },
-      {
-        title2: "Brand Promotion",
-        image:
-          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker.webp",
+          "  https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-1-600x497.webp",
       },
 
-      // Add more cards specific to Mobile App Development
-    ],
-    "Web Development": [
       {
-        title2: "Web Development",
+        title1: "Starline Crypto | UI/UX design & Web development",
+        title2: "Web Development & Web design ",
         image:
-          "https://backergysoft.com/wp-content/uploads/2017/06/Optimus-Robo.webp",
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-3-100x100.webp",
       },
+      
+  
       {
-        title2: "Web Development",
-        image:
-          "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp",
-      },
-      {
-        title2: "Web Development",
-        image:
-          "https://backergysoft.com/wp-content/uploads/2017/06/Robotics.webp",
-      },
-
-      { title2: "Web Development", image: "/images/Mobile.png" },
-    ],
-
-
-    "Digital Marketing": [
-      {
+        title1: "LMC Company | Social Media Marketing",
         title2: "Digital Marketing",
-        title1: "Digital Marketing",
         image:
           '/images/keyword2.jpg',
       },
       {
+        title1: "Starline Crypto | Social Media Marketing",
         title2: "Digital Marketing",
-        title1: "Digital Marketing",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-2.webp",
+      },
+      {
+        title1: "Legend Maritime | Social Media Marketing",
+        title2: "Digital Marketing",
         image:
           '/images/keyword.jpg',
       },
+     
+      {
+        title1: "Unikuk Popcorn | Brand Promotion",
+        title2: "Digital Marketing",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker.webp",
+      },
+     
+      {
+        title1: "Infinity Academy | Social Media Marketing",
+        title2: "Digital Marketing",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-6.webp",
+      },
+    
+
+      {
+        title1: "Optimus Robo | Social Media Marketing",
+        title2: "Digital Marketing",
+        image:
+          "      https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-7.webp",
+      },
+      {
+        title1: "Technology | Business",
+        title2: "3D Design & Animation",
+        image:
+          "/images/animation icon.jpg",
+      },
+
+      {
+      
+        title1: "Wika | Education",
+        title2: "Graphic design",
+        image:
+          "/images/graphics design 3.jpg",
+      },
+
+      {
+      
+        title1: "Bhakshanagal | Online",
+        title2: "Graphic design",
+        image:
+          "/images/graphics design 1.jpg",
+      },
+      {
+      
+        title1: "Bhakshanagal | Package",
+        title2: "Graphic design",
+        image:
+          "/images/package.jpg",
+      },
+      {
+        title1: "Star Link | Exporting",
+        title2: "Graphic design",
+        image:
+          "/images/graphics design 2.jpg",
+      },
+      {
+      
+        title1: "Bhakshanagal | Brochure",
+        title2: "Graphic design",
+        image:
+          "/images/brochure.jpg",
+      },
+      {
+      
+        title1: "AI | Presentation",
+        title2: "Graphic design",
+        image:
+          "/images/presentation.jpg",
+      },
+    
+      {
+        title1: "CIPA | Art",
+        title2: "Software Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/Cipa-2-1.jpg",
+      },
+      {
+        title1: "Fortune Robotics | Technology",
+        title2: "Software Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/Robotics.webp",
+      },
+      
+  
+
+    ],
+  
+    "App Development": [
+      {
+        title1: "Mobile App | IOS",
+        title2: "App Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-1.webp ",
+      },
+  
+      // Add more cards specific to Mobile App Development
+      {
+        title1: "Mobile App | IOS",
+        title2: "App Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-5.webp",
+      },
+
+      {
+        title1: "Mobile App | IOS",
+        title2: "App Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/Robotics.webp",
+      },
+    
+     
+      {
+        title1: "Mobile App | IOS",
+        title2: "App Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-3.webp",
+      },
+
+      {
+        title1: "Mobile App | IOS",
+        title2: "App Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/GraphyLounge.webp",
+      },
+      {
+        title1: "Mobile App | IOS",
+        title2: "App Development",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-2.webp",
+      },
+      // Add more cards specific to Mobile App Development
+    ],
+
+ 
+  
+    "Web Development and Web design": [
+
+      {
+      
+        title1: "Bhakshanagal | Web development & Web design",
+        title2: "Web Development & Web design",
+        image:
+          "/images/graphics design 1.jpg",
+      },
+      {
+        title1: "Mayon Pager Bags | Web development & Web design",
+        title2: "Web Development & Web design ",
+        image:
+          " https://backergysoft.com/wp-content/uploads/2022/10/ezgif.com-gif-maker-2-600x450.webp",
+      },
+      {
+        title1: "Sahasrara Cinemas | UI/UX design & Web development",
+        title2: "Web Development & Web design ",
+        image:
+          "  https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-1-600x497.webp",
+      },
+
+      {
+        title1: "Starline Crypto | UI/UX design & Web development",
+        title2: "Web Development & Web design ",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-3-100x100.webp",
+      },
+      
+  
+  
+
+    ],
+
+
+    "Digital Marketing": [
+
+      {
+        title1: "LMC Company | Social Media Marketing",
+        title2: "Digital Marketing",
+        image:
+          '/images/keyword2.jpg',
+      },
+      {
+        title1: "Starline Crypto | Social Media Marketing",
+        title2: "Digital Marketing",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-2.webp",
+      },
+      {
+        title1: "Legend Maritime | Social Media Marketing",
+        title2: "Digital Marketing",
+        image:
+          '/images/keyword.jpg',
+      },
+     
+      {
+        title1: "Unikuk Popcorn | Brand Promotion",
+        title2: "Digital Marketing",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker.webp",
+      },
+     
+      {
+        title1: "Infinity Academy | Social Media Marketing",
+        title2: "Digital Marketing",
+        image:
+          "https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-6.webp",
+      },
+    
+
+      {
+        title1: "Optimus Robo | Social Media Marketing",
+        title2: "Digital Marketing",
+        image:
+          "      https://backergysoft.com/wp-content/uploads/2017/06/ezgif.com-gif-maker-7.webp",
+      },
+  
+  
+ 
+   
+    
   
     ],
     " 3D Design & Animation": [
       {
-        title2: " 3D Design & Animation",
-        title1: " 3D Design & Animation",
+        title1: "Technology | Business",
+        title2: "3D Design & Animation",
         image:
           "/images/animation icon.jpg",
       },
@@ -341,47 +477,48 @@ export default function Home() {
 
       // Add more cards specific to Mobile App Development
     ],
-    "Graphic designing": [
+
+
+    "Graphic Design": [
       {
       
-        title2: "Graphic designing",
-        title: "Graphic designing",
+        title1: "Wika | Education",
+        title2: "Graphic design",
         image:
           "/images/graphics design 3.jpg",
       },
 
       {
       
-        title2: "Graphic designing",
-        title: "Graphic designing",
+        title1: "Bhakshanagal | Online",
+        title2: "Graphic design",
         image:
           "/images/graphics design 1.jpg",
       },
       {
       
-        title2: "Graphic designing",
-        title: "Graphic designing",
+        title1: "Bhakshanagal | Package",
+        title2: "Graphic design",
         image:
           "/images/package.jpg",
       },
       {
-      
-        title2: "Graphic designing",
-        title: "Graphic designing",
+        title1: "Star Link | Exporting",
+        title2: "Graphic design",
         image:
           "/images/graphics design 2.jpg",
       },
       {
       
-        title2: "Graphic designing",
-        title: "Graphic designing",
+        title1: "Bhakshanagal | Brochure",
+        title2: "Graphic design",
         image:
           "/images/brochure.jpg",
       },
       {
       
-        title2: "Graphic designing",
-        title: "Graphic designing",
+        title1: "AI | Presentation",
+        title2: "Graphic design",
         image:
           "/images/presentation.jpg",
       },
@@ -391,19 +528,20 @@ export default function Home() {
     ],
     "Software Development": [
       {
+        title1: "CIPA | Art",
         title2: "Software Development",
         image:
           "https://backergysoft.com/wp-content/uploads/2017/06/Cipa-2-1.jpg",
       },
       {
+        title1: "Fortune Robotics | Technology",
         title2: "Software Development",
         image:
           "https://backergysoft.com/wp-content/uploads/2017/06/Robotics.webp",
       },
-      // Add more cards specific to Mobile App Development
-      // Add more cards specific to Mobile App Development
+      
     ],
-    // Define data for other tabs similarly
+   
   };
   const [selectedTab, setSelectedTab] = useState("Show All"); // State to track selected tab
   const [animationKey, setAnimationKey] = useState(0); // State to control animation key
@@ -534,11 +672,13 @@ export default function Home() {
     " Digital Marketing ",
     "3D Design & Animation",
     "Graphic designing",
+    "Social Media Management",
     "Brand Promotion",
     "Mobile App Development",
     "Social Media Marketing",
     "Software Development",
     "Web Development",
+    "Web Design",
     "IOS Development",
   ];
 
@@ -755,6 +895,9 @@ export default function Home() {
             </div>
             <div className="  mt-5  col-md-6 justify-content-center d-block   ">
               <h1 className="contentw">Welcome to Lunar Enterprises!</h1>
+              <p className="contentwp">
+              NO. 1 Digital Marketing And Web <br/> Development Company
+            </p>
               <p className="contentp">
                 We are excited to present our proposal for your digital
                 marketing, website design, and development needs. At Borcelle,
@@ -855,45 +998,42 @@ export default function Home() {
       </div>
 
       <div id="tabsection">
-        <div className="container-fluid ">
-          {/* Tab buttons */}
-          <div className="">
-            <div className="row text-center mb-3 d-flex justify-content-center align-items-center tabiss itemdis">
-              {Object.keys(cardData).map((tabName, index) => (
-                <div
-                  className={`col-md-2 col-6 text-center mt-2 d-flex justify-content-center align-items-center tab ${
-                    selectedTab === tabName ? "active-tab" : "non-active"
-                  }`}
-                  key={index}
-                  onClick={() => handleTabClick(tabName)}
-                >
-                  <h6 className="text-wrap justify-center">{tabName}</h6>
-                </div>
-              ))}
+      <div class="container-fluid">
+      
+        <div class="row text-center mb-3 d-flex justify-content-center align-items-center tabiss itemdis">
+         
+          {Object.keys(cardData).map((tabName, index) => (
+            <div
+              class={` widthser col-md-2 col-6 text-center mt-2 d-flex  tab ${
+                selectedTab === tabName ? "" : ""
+              }`}
+              key={index}
+              onClick={() => handleTabClick(tabName)}
+            >
+              <Button className={`   widthser   ${  selectedTab === tabName ? "active-tab" : "non-active"
+            }`}>
+                <p className=" tab-name  justify-center">{tabName}</p>
+              </Button>
             </div>
-          </div>
-
-        
-          {/* Card data */}
-          <div className="row">
-            {cardData[selectedTab].map((card, index) => (
-              <div className="col-md-3 col-6" key={index}>
-                <div
-                  className={`cardwhy card animate__animated ${
-                    animations[(index + animationKey) % animations.length]
-                  }`}
-                >
-                  <img src={card.image} alt={card.title} />
-                  <div className="card-body content">
-                    <h2>{card.title1 || card.title}</h2>
-                    <p>{card.title2}</p>
-                  </div>
+          ))}
+        </div>
+    
+        <div class="row">
+          {cardData[selectedTab].map((card, index) => (
+            <div class="col-md-3 col-6" key={index}>
+              <div class="cardwhy card animate__animated">
+                <img src={card.image} alt={card.title} />
+                <div class="card-body content">
+                  <h2>{card.title1 || card.title}</h2>
+                  <p>{card.title2}</p>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </div>
+      </div>s
+    </div>
+    
 
       <div id="bannercout">
         <div className="container">

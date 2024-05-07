@@ -281,6 +281,12 @@ a {
   font-weight: 700;
   margin-left: 30px;
 }
+.contentwp {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 30px;
+}
 .contentp {
   color: white;
   font-size: 14px;
@@ -377,20 +383,45 @@ a {
   padding-top: 50px;
   padding-bottom: 100px;
 }
+.widthser {
+  width: 350px !important;
+  margin-left: 25px;
+  height: 45px;
+ 
+  margin-bottom: 20px;
+  text-align: center; /* Center the text horizontally */
+}
+
+.tab-name {
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowed text */
+  text-overflow: ellipsis; /* Display ellipsis (...) when text overflows */
+}
+
+/* Adjust font size for smaller screens */
+@media (max-width: 768px) {
+  .tab-name {
+    font-size: 12px;
+  }
+}
+
+
 .tab {
   cursor: pointer;
 }
 
 .active-tab {
-  color: #777777; /* Text color for selected tab */
-  font-size: 15px;
-  font-weight: 500;
+  background-color: #777777 !important; /* Background color for selected tab */
+  color: #ffffff; /* Text color for selected tab */
+  /* Add any additional styles for the active tab */
 }
+
 .non-active {
-  color: black;
-  font-size: 15px;
-  font-weight: 500;
+  background-color: black; /* Background color for non-selected tab */
+  color: #ffffff; /* Text color for non-selected tab */
+  /* Add any additional styles for the non-active tab */
 }
+
 .tabiss {
   z-index: 9999;
   position: relative;
@@ -762,6 +793,14 @@ a {
 /*----------------------start media query------------------- */
 
 @media (max-width: 556px) {
+  .widthser {
+    width: 150px !important;
+    margin-left: 3px;
+    height: 45px;
+   
+    margin-bottom: 20px;
+    text-align: center; /* Center the text horizontally */
+  }
   .logo {
     justify-content: center;
     align-items: center;
@@ -947,6 +986,7 @@ a {
 }
 
 @media (min-width: 556px) {
+ 
   #tabsection .itemdissec {
     display: none;
   }
@@ -988,6 +1028,7 @@ a {
 }
 
 @media (max-width: 576px) {
+
   .header {
     background-color: transparent; /* Initial background color */
 
@@ -1005,9 +1046,11 @@ a {
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+
 }
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  
   .contact-item {
     padding-right: 175px;
     flex-direction: row;
@@ -1040,4 +1083,15 @@ a {
 
 /* // XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
+}
+
+@media (min-width: 558px) and (max-width: 750px) {
+  .widthser {
+  
+    width: 150px !important;
+    margin-right: 6px;
+    height: 45px;
+    margin-bottom: 20px;
+    text-align: center; /* Center the text horizontally */
+  }
 }
