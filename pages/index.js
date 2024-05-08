@@ -776,7 +776,8 @@ useEffect(() => {
 
 
       {isOpena && (
-        <div className="popup">
+        <div id="up">
+        <div className=" popup">
           <div className="popup-inner">
           <div className='close-btn'>
            
@@ -911,6 +912,7 @@ useEffect(() => {
      
    
           </div>
+        </div>
         </div>
       )}
       
@@ -1096,7 +1098,7 @@ useEffect(() => {
               </p>
               <div className="align-content-center   ">
                 <a href="#contactus">
-                  <button className="buttonstyle ">
+                  <button   className="buttonstyle ">
                     Contact Us
                     <i
                       class="fa fa-chevron-right  arrowstylee"
