@@ -857,7 +857,7 @@ useEffect(() => {
       readOnly
     />
     {isOpenb && (
-      <div className="dropdown-options mt-3">
+      <div className="dropdown-optionsqu mt-2 mb-2 ">
         {options.map((option, index) => (
           <div
             key={index}
