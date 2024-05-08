@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "react-bootstrap";
+import { IoCloseSharp } from "react-icons/io5";
 
 export default function Home() {
   const settings = {
@@ -593,6 +594,7 @@ export default function Home() {
   const [userMsg, setUserMsg] = useState("");
 
   const [selectedOptions, setSelectedOptions] = useState([]);
+  const [selectedOptionsb, setSelectedOptionsb] = useState([]);
 
   // const [recaptchaToken, setRecaptchaToken] = useState(null);
 
@@ -630,7 +632,7 @@ export default function Home() {
         phno: phoneField,
         message: message,
         service: selectedOptions,
-
+        service: selectedOptionsb,
         page_location: liveUrlinital,
 
         website_source: "Lunar Seo",
@@ -712,7 +714,57 @@ export default function Home() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+
+
+
+
+  const [isOpena, setIsOpena] = useState(true);
+
+  const handleClose = () => {
+    setIsOpena(false);
+  };
   
+
+
+
+
+
+
+  const [isOpenb, setIsOpenb] = useState(false);
+
+  const toggleDropdownb = () => {
+    setIsOpenb(!isOpenb);
+  };
+  
+  const handleOptionClickb = (option) => {
+    const index = selectedOptionsb.indexOf(option);
+    if (index === -1) {
+      setSelectedOptionsb([...selectedOptionsb, option]);
+    } else {
+      const updatedOptions = [...selectedOptionsb];
+      updatedOptions.splice(index, 1);
+      setSelectedOptionsb(updatedOptions);
+    }
+  };
+
+  const dropdownRefb = useRef(null);
+useEffect(() => {
+  const handleClickOutsideb = (event) => {
+    if (dropdownRefb.current && !dropdownRefb.current.contains(event.target)) {
+      setIsOpensb(false);
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutsideb);
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutsideb);
+  };
+}, []);
+
+
+
+
   return (
     <>
       <Head>
@@ -723,7 +775,144 @@ export default function Home() {
       </Head>
 
 
+      {isOpena && (
+        <div className="popup">
+          <div className="popup-inner">
+          <div className='close-btn'>
+           
+            <h2 className="">Quick Contact</h2>
+            <div className="buttonstylecont" onClick={handleClose}>
+            <IoCloseSharp />
+          </div>
+            </div>
+            <h5 className="mb-3">Welcome to Lunar Enterprises!</h5>
+          
+            <div class="col-lg-12 col-md-12">
+            <div class="contactform">
+              <form
+              className=""
+                onSubmit={(e) => {
+                  handleSubmit3(e);
+                }}
+                class="needs-validation "
+                autocomplete="off"
+                novalidate=""
+              >
+                <div class="form-field has-validation">
+                  <input type="hidden" name="action" value="/" />
 
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    onChange={(e) => setName(e.target.value)}
+                    aria-describedby="inputGroupPrepend"
+                    placeholder="Your Name"
+                    required
+                    class="inputnamepop"
+                  />
+                  <div class="invalid-feedback">Please type your Name</div>
+                </div>
+                <div class="form-field has-validation ">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    onChange={(e) => setEmail(e.target.value)}
+                    aria-describedby="inputGroupPrepend"
+                    placeholder="Your Email"
+                    pattern="[a-zA-Z0-9]+.+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]{2,4}$"
+                    required=""
+                    class="inputnamepop"
+                  />
+                  <div class="invalid-feedback">
+                    Please enter a valid email address
+                  </div>
+                </div>
+                <div class="form-field has-validation">
+                  <input
+                    type="text"
+                    id="phonefield"
+                    name="phonefield"
+                    onChange={(e) => setPhoneField(e.target.value)}
+                    aria-describedby="inputGroupPrepend"
+                    placeholder="Phone Number"
+                    pattern="[0-9 ,+]*"
+                    minlength="10"
+                    maxlength="14"
+                    required=""
+                    class="inputnamepop"
+                  />
+                  <div class="invalid-feedback">Please enter phone no.</div>
+                </div>
+
+                <div className="custom-dropdown has-validation" ref={dropdownRef}>
+    <input
+      type="text"
+      className="inputnamepop"
+      onClick={toggleDropdownb}
+      placeholder="Our Services"
+      value={selectedOptionsb.join(", ")}
+      readOnly
+    />
+    {isOpenb && (
+      <div className="dropdown-options mt-3">
+        {options.map((option, index) => (
+          <div
+            key={index}
+            className={`option ${
+              selectedOptionsb.includes(option)
+                ? "selectedservicesed m-1"
+                : "m-1 selectedservices"
+            }`}
+            onClick={() => handleOptionClickb(option)}
+            style={{
+              zIndex: "999",
+              backgroundColor: selectedOptionsb.includes(option)
+                ? "blue"
+                : "transparent",
+            }}
+          >
+            {option}
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+
+                <div class="form-field has-validation">
+                  <textarea
+                    rows="4"
+                    id="comments"
+                    name="comments"
+                    aria-describedby="inputGroupPrepend"
+                    placeholder="Enter your message here..."
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
+                    class="inputnamepop"
+                  ></textarea>
+
+                  <div>
+                    <div class="invalid-feedback">Please enter a message</div>
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-rounded btn-lg mt-3"
+                      disabled={loader} // Disable button when loader is active
+                    >
+                    {loader ? "Loading..." : "Submit"} <i class="fa fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <h5 className="thanks">{userMsg}</h5>
+            </div>
+          </div>
+       
+     
+   
+          </div>
+        </div>
+      )}
       
       <div class="side-bars" style={{zIndex:999}}>
       <div class="s-bar clearfix" style={{right:0}}>
